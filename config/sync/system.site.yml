@@ -1,0 +1,14 @@
+uuid: 240507a7-6e74-41f4-bb6e-2a92bad805d4
+name: 'D8 Training'
+mail: jenpia.andes@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
