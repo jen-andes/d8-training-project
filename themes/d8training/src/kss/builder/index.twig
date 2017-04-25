@@ -1,0 +1,14 @@
+{% set isPage = false %}
+{% if sections|length %}
+  {% set section = sections|first %}
+  {% set reference = section.reference|split('.')|first %}
+  {% set isPage = reference|lower is same as('pages') %}
+{% endif %}
+
+{% if isPage %}
+  {% if template.isItem %}
+    {% include 'page.twig' %}
+  {% endif %}
+{% else %}
+  {% include 'default.twig' %}
+{% endif %}

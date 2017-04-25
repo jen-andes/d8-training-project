@@ -1,0 +1,9 @@
+scripts:
+  - /core/assets/vendor/jquery/jquery.min.js
+  - /core/assets/vendor/jquery-once/jquery.once.min.js
+  - /core/assets/vendor/domready/ready.min.js
+  - /core/misc/drupalSettingsLoader.js
+  - /core/misc/drupal.js
+
+styles:
+  
