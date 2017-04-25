@@ -1,0 +1,7 @@
+# Ignore directories
+vendor
+core
+profiles
+
+# Ignore Drupal's file directory
+sites/default/files
