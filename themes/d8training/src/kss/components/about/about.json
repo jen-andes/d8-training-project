@@ -1,0 +1,17 @@
+{ 
+  "kicker": "Our",
+  "title": "Story",
+  "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>",
+  "cta": {
+    "title": "Read More",
+    "url": "#"
+  },
+  "images": [
+    {
+      "url":"../../src/kss/components/about/images/about_one.jpg"
+    },
+    {
+      "url":"../../src/kss/components/about/images/about_two.jpg"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<div class="counter-area section-padding">
+    <div class="count-area-bg" style="background-image: url({{ background_image }})"></div>
+    <div class="container wow fadeIn">
+        <div class="row">
+            {% for counter in counters %}
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                <div class="single-counter text-center">
+                    <div class="counter-icon"><i class="{{ counter.icon }}"></i></div>
+                    <h3 class="counter">{{ counter.value }}</h3>
+                    <p>{{ counter.name }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

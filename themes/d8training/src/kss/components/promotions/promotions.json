@@ -1,0 +1,36 @@
+{
+  "kicker": "Specials",
+  "title": "Special Promotion",
+  "items": [
+    {
+      "image": "../../src/kss/components/promotions/images/promo_1.jpg",
+      "price_label": "From",
+      "price": "$15",
+      "title": "Special Breakfast",
+      "cta": {
+        "title": "Order Now",
+        "url": "#"
+      }
+    },
+    {
+      "image": "../../src/kss/components/promotions/images/promo_2.jpg",
+      "price_label": "From",
+      "price": "$25",
+      "title": "Special Lunch",
+      "cta": {
+        "title": "Order Now",
+        "url": "#"
+      }
+    },
+    {
+      "image": "../../src/kss/components/promotions/images/promo_3.jpg",
+      "price_label": "From",
+      "price": "$35",
+      "title": "Special Dinner",
+      "cta": {
+        "title": "Order Now",
+        "url": "#"
+      }
+    }
+  ]
+}

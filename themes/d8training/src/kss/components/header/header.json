@@ -1,0 +1,96 @@
+{
+  "navigation": {
+    "homepage_url": "#",
+    "logo": "../../src/kss/components/navigation/images/main_logo.png",
+    "logo_black": "../../src/kss/components/navigation/images/main_logo_black.png",
+    "menus": [
+      {
+        "name": "Home",
+        "url": "#",
+        "submenus": [
+          {
+            "name": "Home Deafult 1",
+            "url": "#"
+          },
+          {
+            "name": "Home Version 2",
+            "url": "#"
+          },
+          {
+            "name": "Home Version 3",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "About Us",
+        "url": "#",
+        "submenus": []
+      },
+      {
+        "name": "Pages",
+        "url": "#",
+        "submenus": [
+          {
+            "name": "About Style 2",
+            "url": "#"
+          },
+          {
+            "name": "Menu Style 2",
+            "url": "#"
+          },
+          {
+            "name": "Reservation 2",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Reservation",
+        "url": "#",
+        "submenus": []
+      },
+      {
+        "name": "Events",
+        "url": "#",
+        "submenus": []
+      },
+      {
+        "name": "Contact",
+        "url": "#",
+        "submenus": []
+      }
+    ]
+  },
+  "slider": {
+    "slides" : [
+      {
+        "title": "Welcome to",
+        "subtitle": "OWL Cafe & Restaurant",
+        "bg": "../../src/kss/components/slider/images/slide_1.jpg",
+        "cta": {
+          "title": "Reservation Now",
+          "url": "/reservation"
+        }
+      },
+      {
+        "title": "Our menus",
+        "subtitle": "See What's new today",
+        "bg": "../../src/kss/components/slider/images/slide_2.jpg",
+        "cta": {
+          "title": "Todays Menu",
+          "url": "#"
+        }
+      },
+      {
+        "title": "Get ready",
+        "subtitle": "to Join with us",
+        "bg": "../../src/kss/components/slider/images/slide_3.jpg",
+        "cta": {
+          "title": "Book A Table",
+          "url": "/reservation"
+        }
+      }
+    ] 
+  }
+}
