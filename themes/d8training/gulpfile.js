@@ -114,10 +114,10 @@ gulp.task('build:kss', function() {
     ],
     destination: 'dist/style-guide',
     builder: 'src/kss/builder',
-    namespace: 'd8kss:' + __dirname + '/src/kss/components/',
     homepage: '/../styleguide.md',
-    title: 'Style Guide',
-    'extend-drupal8': true
+    'extend-drupal8': true,
+    namespace: 'd8training:' + __dirname + '/src/kss/components/',
+    title: 'Style Guide'
   };
 
   var config = yaml.safeLoad(fs.readFileSync('src/kss/styleguide.yml', 'utf8')) || {};

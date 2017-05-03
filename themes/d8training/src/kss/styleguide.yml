@@ -4,6 +4,31 @@ scripts:
   - /core/assets/vendor/domready/ready.min.js
   - /core/misc/drupalSettingsLoader.js
   - /core/misc/drupal.js
+  - /core/misc/drupal.init.js
+  - /themes/d8training/vendor-dist/js/vendor/bootstrap.min.js
+  - /themes/d8training/vendor-dist/js/vendor/jquery.easing.1.3.js
+  - /themes/d8training/vendor-dist/js/vendor/jquery-migrate-1.2.1.min.js
+  - /themes/d8training/vendor-dist/js/jquery.pogo-slider.js
+  - /themes/d8training/vendor-dist/js/owl.carousel.min.js
+  - /themes/d8training/vendor-dist/js/jquery.mixitup.min.js
+  - /themes/d8training/vendor-dist/js/spectragram.js
+  - /themes/d8training/vendor-dist/js/jquery.magnific-popup.min.js
+  - /themes/d8training/vendor-dist/js/datepicker.min.js
+  - /themes/d8training/vendor-dist/js/timepicker.min.js
+  - /themes/d8training/vendor-dist/js/waypoints.min.js
+  - /themes/d8training/vendor-dist/js/jquery.counterup.min.js
+  - /themes/d8training/vendor-dist/js/wow.min.js
+  - /themes/d8training/vendor-dist/js/contact-form.js
+  - /themes/d8training/vendor-dist/js/jquery.sticky.js
+  - /themes/d8training/vendor-dist/js/main.js
 
 styles:
-  
+  - /core/assets/vendor/normalize-css/normalize.css
+  - /themes/d8training/vendor-dist/css/animate.css
+  - /themes/d8training/vendor-dist/css/pogo-slider.css
+  - /themes/d8training/vendor-dist/css/owl.carousel.css
+  - /themes/d8training/vendor-dist/css/datepicker.css
+  - /themes/d8training/vendor-dist/css/timepicker.min.css
+  - /themes/d8training/vendor-dist/css/magnific-popup.css
+  - /themes/d8training/vendor-dist/css/bootstrap.min.css
+  - /themes/d8training/vendor-dist/css/font-awesome.min.css

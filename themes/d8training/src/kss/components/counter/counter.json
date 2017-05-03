@@ -1,0 +1,25 @@
+{
+  "background_image": "../../src/kss/components/counter/images/about-counter-bg.jpg",
+  "counters" : [
+    {
+      "icon": "fa fa-heart-o",
+      "value": "25.000",
+      "name": "Daily Meal"
+    },
+    {
+      "icon": "fa fa-heart-o",
+      "value": "56.000",
+      "name": "Happy Clients"
+    },
+    {
+      "icon": "fa fa-cutlery",
+      "value": "66.000",
+      "name": "Parcel Today"
+    },
+    {
+      "icon": "fa fa-map-o",
+      "value": "78.000",
+      "name": "Online Stores"
+    }
+  ]
+}

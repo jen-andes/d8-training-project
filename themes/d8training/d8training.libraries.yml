@@ -1,0 +1,22 @@
+global:
+  css:
+    theme:
+      dist/css/base.css: {}
+      dist/css/responsive.css: {}
+
+bootstrap:
+  css:
+    theme:
+      vendor-dist/css/bootstrap.min.css: {}
+
+font-awesome:
+  css:
+    theme:
+      vendor-dist/css/font-awesome.min.css: {}
+
+owl-carousel:
+  css:
+    theme:
+      vendor-dist/css/owl.carousel.css: {}
+  js:
+    vendor-dist/js/owl.carousel.min.js: {}

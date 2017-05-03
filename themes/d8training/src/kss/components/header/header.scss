@@ -1,0 +1,71 @@
+// Header
+//
+// Use to display the Header component.
+//
+// Markup: header.twig
+//
+// Styleguide Components.Header
+
+/*--------------------------
+    2. TOP AREA
+---------------------------*/
+
+.top-area {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.top-social-bookmark {
+    float: right;
+}
+
+.book-table-popup {
+    float: right;
+    padding: 5px;
+}
+
+.top-social-bookmark ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.top-social-bookmark ul li {
+    display: inline;
+}
+
+.top-social-bookmark ul li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 39px;
+    margin: 0 -2.5px;
+    padding: 6px;
+    text-align: center;
+    width: 40px;
+}
+
+.top-social-bookmark ul li a:hover {
+    background: #fff;
+    color: #d0963e;
+}
+
+.top-social-bookmark ul li:last-child a {
+    margin-right: -5px;
+}
+
+.book-table-popup a {
+    background: #d0963e none repeat scroll 0 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 14px 30px;
+}
+
+.book-table-popup a:hover {
+    background: #fff none repeat scroll 0 0;
+    color: #d0963e;
+}

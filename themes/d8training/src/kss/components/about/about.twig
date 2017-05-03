@@ -1,0 +1,27 @@
+<section class="about-area section-padding">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
+                <div class="area-title">
+                    <h2>{{ kicker }} <span>{{ title }}</span></h2>
+                </div>
+                <div class="about-content">
+                    {{ description }}
+                    <a href="{{ cta.url }}" class="read-more">{{ cta.title }}</a>
+                </div>
+            </div>
+
+            <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                <div class="row">
+                    {% for image in images %}
+                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                        <div class="about-img">
+                            <img src="{{ image.url }}" alt="">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

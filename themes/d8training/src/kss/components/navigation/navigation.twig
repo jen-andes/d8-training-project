@@ -1,0 +1,49 @@
+<!--MAINMENU AREA-->
+<div class="mainmenu-area" id="mainmenu-area">
+    <div class="mainmenu-area-bg"></div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{{ homepage_url }}" class="navbar-brand"><img src="{{ logo_black }}" alt="logo"></a>
+                <a href="{{ homepage_url }}" class="navbar-brand white"><img src="{{ logo }}" alt="logo"></a>
+            </div>
+            <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                <!--<div class="search-form-area">
+                    <div class="search-form-overlay"></div>
+                    <a class="search-form-trigger" href="#search-form">Search<span></span></a>
+                    <div id="search-form" class="search-form">
+                        <form>
+                            <input type="search" placeholder="Search...">
+                        </form>
+                    </div>
+                </div>-->
+                <ul id="nav" class="nav navbar-nav cl-effect-11">
+                    {% for menu in menus %}
+                        <li>
+                            <a class="at-drop-down" href="{{ menu.url }}">{{ menu.name }}
+                            {% if menu.submenus is not empty -%}
+                                <i class="hidden-md hidden-lg fa fa-angle-down"></i>
+                            {%- endif %}
+                            </a>
+
+                            {% if menu.submenus is not empty -%}
+                                <ul class="sub-menu">
+                                {% for submenu in menu.submenus %}
+                                    <li><a href="{{ submenu.url }}">{{ submenu.name }}</a></li>
+                                {% endfor %}
+                                </ul>
+                            {%- endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--END MAINMENU AREA END-->

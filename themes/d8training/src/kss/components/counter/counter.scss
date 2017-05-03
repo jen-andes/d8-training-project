@@ -1,0 +1,45 @@
+// Counter
+//
+// Use to display the Counter component.
+//
+// Markup: counter.twig
+//
+// Styleguide Components.Counter
+
+/*----------------------------
+    14.1 COUNTER AREA
+------------------------------*/
+
+.counter-area {
+    color: #fff;
+    position: relative;
+}
+
+.count-area-bg {
+    background: rgba(0, 0, 0, 0) url("img/about/about_counter_bgr.jpg") no-repeat scroll 0 0 / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.single-counter {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.counter-icon {
+    font-size: 48px;
+    height: 50px;
+    margin: auto auto 20px;
+    text-align: center;
+    width: 50px;
+}
+
+h3.counter {
+    font-size: 38px;
+    letter-spacing: 4px;
+    line-height: 0.7;
+}

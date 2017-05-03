@@ -759,23 +759,22 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'config/sync';
+$databases['default']['default'] = array (
+  'database' => 'd8training',
+  'username' => 'root',
+  'password' => 'root',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
 
 /**
-* Override default settings.php with settings.[environment].php.
-*/
-$host = strtolower($_SERVER['HTTP_HOST']);
-$bash_env = strtolower(getenv('ENV'));
-if (in_array($host, array('d8training.dev'))) {
-  $environment = 'local';
-}
+ * Trusted host configuration.
+ */
+$settings['trusted_host_patterns'] = array(
+    '^d8training\.dev$'
+);
 
-// Prefix configuration variables with 'pre_' to avoid any clashes.
-$conf['pre_environment'] = ucfirst($environment);
-$conf['pre_settings_file'] = '/settings.' . $environment . '.php';
-
-// include settings file based on environment
-if (file_exists(__DIR__ . $conf['pre_settings_file'])) {
-  include __DIR__ . $conf['pre_settings_file'];
-}
+$config_directories['sync'] = 'config/sync';
