@@ -1,0 +1,23 @@
+uuid: e9c936ed-86d8-4db2-a027-bb6f8a1db75e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instagram
+    - node.type.profile
+  module:
+    - link
+id: node.profile.field_instagram
+field_name: field_instagram
+entity_type: node
+bundle: profile
+label: 'Instagram Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

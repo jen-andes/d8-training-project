@@ -1,0 +1,19 @@
+uuid: 89ffa09d-7842-469e-90d7-773119e9774c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_title
+    - paragraphs.paragraphs_type.slide
+id: paragraph.slide.field_sub_title
+field_name: field_sub_title
+entity_type: paragraph
+bundle: slide
+label: 'Sub Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

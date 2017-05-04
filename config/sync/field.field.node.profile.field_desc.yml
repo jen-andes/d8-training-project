@@ -1,0 +1,19 @@
+uuid: bea163ce-d05f-4fd5-8a43-9ea0a3e8436d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_desc
+    - node.type.profile
+id: node.profile.field_desc
+field_name: field_desc
+entity_type: node
+bundle: profile
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

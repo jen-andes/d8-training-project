@@ -1,0 +1,17 @@
+uuid: cd652b5d-257c-4f53-bada-c610be0b1ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homepage
+  module:
+    - user
+id: node.homepage.default
+targetEntityType: node
+bundle: homepage
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

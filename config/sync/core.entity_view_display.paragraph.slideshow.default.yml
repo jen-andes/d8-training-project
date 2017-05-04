@@ -1,0 +1,24 @@
+uuid: 59d05b68-ad54-45da-b02c-85cfa0a11b6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_slide
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_slide:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: eae8363e-414c-434e-a3b7-180197ec4ec3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Profile Type'
+vid: profile_type
+description: ''
+hierarchy: 0
+weight: 0
