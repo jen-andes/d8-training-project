@@ -1,0 +1,23 @@
+uuid: a304778e-d2f4-4521-bf19-1c109e4e13b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.slide
+  module:
+    - link
+id: paragraph.slide.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: slide
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 2
+field_type: link

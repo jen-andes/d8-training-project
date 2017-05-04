@@ -1,0 +1,23 @@
+uuid: dcddae92-65e5-4019-8fd8-553f800b7115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dribble
+    - node.type.profile
+  module:
+    - link
+id: node.profile.field_dribble
+field_name: field_dribble
+entity_type: node
+bundle: profile
+label: 'Dribble Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

@@ -2,6 +2,7 @@
 vendor
 core
 profiles
+modules/contrib
 
 # Ignore Drupal's file directory
 sites/default/files
