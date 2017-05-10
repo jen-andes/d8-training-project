@@ -677,7 +677,7 @@ if ($settings['hash_salt']) {
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+$settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 /**
  * Override the default service container class.
@@ -776,5 +776,8 @@ $databases['default']['default'] = array (
 $settings['trusted_host_patterns'] = array(
     '^d8training\.dev$'
 );
+
+$settings['cache']['bins']['render'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 $config_directories['sync'] = 'config/sync';
