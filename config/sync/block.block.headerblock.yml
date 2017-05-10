@@ -1,0 +1,27 @@
+uuid: 9ce310a1-9da9-4648-a7d7-209766737d62
+langcode: en
+status: true
+dependencies:
+  module:
+    - d8t_system
+  theme:
+    - d8training
+id: headerblock
+theme: d8training
+region: header
+weight: 0
+provider: null
+plugin: d8t_header
+settings:
+  id: d8t_header
+  label: 'Header block'
+  provider: d8t_system
+  label_display: visible
+  email: testone@email.com
+  phone: '+1 800 234 5678'
+  facebook: ''
+  twitter: 'http://example.com'
+  dribble: 'http://example.com'
+  behance: 'http://example.com'
+  feed: 'http://example.com'
+visibility: {  }

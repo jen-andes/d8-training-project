@@ -1,9 +1,10 @@
 uuid: 17e34786-81f8-4658-b32d-12e71c490eae
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.homepage.field_slideshow
     - node.type.homepage
   module:
     - user
@@ -15,4 +16,5 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_slideshow: true
