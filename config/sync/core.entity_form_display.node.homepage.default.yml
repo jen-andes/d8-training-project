@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.field_slideshow
     - node.type.homepage
   module:
+    - paragraphs
     - path
 id: node.homepage.default
 targetEntityType: node
@@ -17,6 +19,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_slideshow:
+    type: entity_reference_paragraphs
+    weight: 31
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 30
