@@ -4,6 +4,7 @@
  * Theme override to display a 'Footer' block.
  */
 #}
+
 {% set social_links = [] %}
 {% for social in content.field_social_link['#items'] %}
   {% set social = content.field_social_link[loop.index0] %}
