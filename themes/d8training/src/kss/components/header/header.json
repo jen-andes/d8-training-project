@@ -5,19 +5,32 @@
     "url": "/reservation",
     "label": "Book a table"
   },
-  "no-hero": true,
-  "facebook": "http://facebook.com",
-  "twitter": "http://twitter.com",
-  "dribble": "http://example.com",
-  "behance": "http://example.com",
-  "feed": "http://example.com",
   "homepage_url": "#",
   "logo": "../../src/kss/components/header/images/main_logo.png",
   "logo_black": "../../src/kss/components/header/images/main_logo_black.png",
+  "social_links": [
+    {
+      "icon": "facebook",
+      "url": "http://example.com"
+    },
+    {
+      "icon": "twitter",
+      "url": "http://example.com"
+    },
+    {
+      "icon": "dribble",
+      "url": "http://example.com"
+    },
+    {
+      "icon": "behance",
+      "url": "http://example.com"
+    }
+  ],
   "menus": [
     {
       "name": "Home",
       "url": "#",
+      "is_active": true,
       "submenus": [
         {
           "name": "Home Deafult 1",
@@ -36,11 +49,13 @@
     {
       "name": "About Us",
       "url": "#",
+      "is_active": false,
       "submenus": []
     },
     {
       "name": "Pages",
       "url": "#",
+      "is_active": false,
       "submenus": [
         {
           "name": "About Style 2",
@@ -59,16 +74,19 @@
     {
       "name": "Reservation",
       "url": "#",
+      "is_active": false,
       "submenus": []
     },
     {
       "name": "Events",
       "url": "#",
+      "is_active": false,
       "submenus": []
     },
     {
       "name": "Contact",
       "url": "#",
+      "is_active": false,
       "submenus": []
     }
   ]

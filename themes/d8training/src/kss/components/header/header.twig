@@ -15,16 +15,16 @@
                             <div class="book-table-popup">
                                 <a href="{{ cta.url }}">{{ cta.label }}</a>
                             </div>
-                        {%- endif %}
+                        {%- endif %}    
 
                         <div class="top-social-bookmark">
-                            <ul>
-                                {% if facebook %}<li><a href="{{ facebook }}"><i class="fa fa-facebook"></i></a></li>{% endif %}
-                                {% if twitter %}<li><a href="{{ twitter }}"><i class="fa fa-twitter"></i></a></li>{% endif %}
-                                {% if dribble %}<li><a href="{{ dribble }}"><i class="fa fa-dribbble"></i></a></li>{% endif %}
-                                {% if behance %}<li><a href="{{ behance }}"><i class="fa fa-behance"></i></a></li>{% endif %}
-                                {% if feed %}<li><a href="{{ feed }}"><i class="fa fa-feed"></i></a></li>{% endif %}
-                            </ul>
+                            {% if social_links is not empty -%}
+                                <ul>
+                                    {% for social in social_links %}
+                                        <li><a href="{{ social.rul }}"><i class="fa fa-{{ social.icon }}"></i></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {%- endif %}
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         <a href="{{ homepage_url }}" class="navbar-brand white"><img src="{{ logo|default() }}" alt="logo"></a>
                     </div>
                     <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
-                        <!--<div class="search-form-area">
+                        <div class="search-form-area">
                             <div class="search-form-overlay"></div>
                             <a class="search-form-trigger" href="#search-form">Search<span></span></a>
                             <div id="search-form" class="search-form">
@@ -55,10 +55,10 @@
                                     <input type="search" placeholder="Search...">
                                 </form>
                             </div>
-                        </div>-->
+                        </div>
                         <ul id="nav" class="nav navbar-nav cl-effect-11">
                             {% for menu in menus %}
-                                <li>
+                                <li {{ menu.is_active ? 'class="active"' : '' }} >
                                     <a class="at-drop-down" href="{{ menu.url }}">{{ menu.text }}
                                     {% if menu.submenus is not empty -%}
                                         <i class="hidden-md hidden-lg fa fa-angle-down"></i>

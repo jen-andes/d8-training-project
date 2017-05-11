@@ -1,0 +1,48 @@
+uuid: 024b59a0-c4c0-4cd3-a5f2-f526f4983819
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_social_icon
+field_name: field_social_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: facebook
+      label: facebook
+    -
+      value: twitter
+      label: twitter
+    -
+      value: dribbble
+      label: dribbble
+    -
+      value: google-plus
+      label: google-plus
+    -
+      value: flickr
+      label: flickr
+    -
+      value: pinterest
+      label: pinterest
+    -
+      value: skype
+      label: skype
+    -
+      value: behance
+      label: behance
+    -
+      value: feed
+      label: feed
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

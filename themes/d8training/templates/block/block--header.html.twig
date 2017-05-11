@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Theme override to display a 'Header' block.
+ */
+#}
+
+{% set social_links = [] %}
+{% for social in content.field_social_link['#items'] %}
+  {% set social = content.field_social_link[loop.index0] %}
+    {% set field_icon = social['#paragraph'].get('field_social_icon').getValue() %}
+    {% set field_link = social['#paragraph'].get('field_link').getValue() %}
+    {%
+      set item = {
+        'icon': field_icon.0.value,
+        'url': field_link.0.uri
+      }
+    %}
+  {% set social_links = social_links|merge([item]) %}
+{% endfor %}
+
+{{ attach_library('d8training/header') }}
+{% include '@d8training/header/header.twig' with {
+    'logo': content.field_image.0['#markup'],
+    'email': content.field_email.0['#context'].value,
+    'phone': content.field_phone.0['#context'].value,
+    'menus': content.menus,
+    'cta': {
+      'url': '/reservation',
+      'label': 'Book a table'
+    },
+    'social_links': social_links
+  } only
+%}
