@@ -22,6 +22,7 @@
 {{ attach_library('d8training/header') }}
 {% include '@d8training/header/header.twig' with {
     'logo': content.field_image.0['#markup'],
+    'logo_black': content.field_image_inverted.0['#markup'],
     'email': content.field_email.0['#context'].value,
     'phone': content.field_phone.0['#context'].value,
     'menus': content.menus,

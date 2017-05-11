@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.header_block
     - field.field.block_content.header_block.field_email
     - field.field.block_content.header_block.field_image
+    - field.field.block_content.header_block.field_image_inverted
     - field.field.block_content.header_block.field_phone
     - field.field.block_content.header_block.field_social_link
   module:
@@ -25,6 +26,14 @@ content:
     region: content
   field_image:
     weight: 3
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_image_inverted:
+    weight: 4
     label: above
     settings:
       image_style: ''

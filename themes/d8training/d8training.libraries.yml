@@ -21,6 +21,7 @@ header:
       dist/css/header.css: {}
   js:
     dist/js/header.js: {}
+    vendor-dist/js/jquery.sticky.js: {}
 
 footer:
   css:
