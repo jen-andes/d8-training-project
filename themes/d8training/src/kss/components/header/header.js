@@ -1,8 +1,15 @@
 (function (Drupal, $) {
   'use strict';
 
-  Drupal.behaviors.counter = {
+  Drupal.behaviors.header = {
     attach: function (context) {
+
+      /*--------------------------
+          STICKY MAINMENU
+      ---------------------------*/
+      $("#mainmenu-area").sticky({
+        topSpacing: 0
+      });
 
       /*----------------------------
           OPEN SEARCH FORM
