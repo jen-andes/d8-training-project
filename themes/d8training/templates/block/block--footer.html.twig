@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override to display a 'Footer' block.
+ */
+#}
+{% set social_links = [] %}
+{% for social in content.field_social_link['#items'] %}
+  {% set social = content.field_social_link[loop.index0] %}
+    {% set field_icon = social['#paragraph'].get('field_social_icon').getValue() %}
+    {% set field_link = social['#paragraph'].get('field_link').getValue() %}
+    {%
+      set item = {
+        'icon': field_icon.0.value,
+        'url': field_link.0.uri
+      }
+    %}
+  {% set social_links = social_links|merge([item]) %}
+{% endfor %}
+
+{{ attach_library('d8training/footer') }}
+{% include '@d8training/footer/footer.twig' with {
+    'logo': content.field_image.0['#markup'],
+    'copyright': content.field_short_desc.0['#context'].value,
+    'address': content.field_caption.0['#context'].value,
+    'email': content.field_email.0['#context'].value,
+    'phone': content.field_phone.0['#context'].value,
+    'menus': content.menus,
+    'social_links': social_links
+  } only
+%}

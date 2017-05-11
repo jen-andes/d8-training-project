@@ -1,0 +1,19 @@
+uuid: e4d6aea6-7424-4a00-b58e-579b7ed094a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_block
+    - field.storage.block_content.field_phone
+id: block_content.header_block.field_phone
+field_name: field_phone
+entity_type: block_content
+bundle: header_block
+label: Phone
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

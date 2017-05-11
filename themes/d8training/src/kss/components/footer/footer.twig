@@ -1,0 +1,47 @@
+    <!--FOOER AREA-->
+    <div class="footer-area">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="footer-top section-padding text-center">
+                        <div class="footer-logo">
+                            <a href="#"><img src="{{ logo }}" alt=""></a>
+                        </div>
+                        <div class="footer-address">
+                            <p>{{ address }}</p>
+                            <p><a href="mailto:{{ email }}">{{ email }}</a></p>
+                            <p><a href="callto:{{ phone }}">{{ phone }}</a></p>
+                        </div>
+                        <div class="footer-social-bookmark">
+                            {% if social_links is not empty -%}
+                                <ul>
+                                    {% for social in social_links %}
+                                        <li><a href="{{ social.rul }}"><i class="fa fa-{{ social.icon }}"></i></a></li>
+                                    {% endfor %}
+                                </ul>
+                            {%- endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    {% if menus is not empty -%}
+                        <div class="footer-menu">
+                            <ul>
+                                {% for menu in menus %}
+                                    <li><a href="{{ menu.url }}">{{ menu.text }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {%- endif %}
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="footer-copyright">
+                        <p>&copy; {{ copyright }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOER AREA END-->

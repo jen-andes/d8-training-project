@@ -1,0 +1,51 @@
+{
+  "logo": "../../src/kss/components/footer/images/footer_white_logo.png",
+  "address": "20,floor,Queenslad Victoria Building. 60 california street california USA",
+  "email": "Hellow@OwlTheme.com",
+  "phone": "+88 000 0000 1111",
+  "copyright": "2017 Owl Restaurant. All Right Reserved",
+  "social_links": [
+    {
+      "icon": "facebook",
+      "url": "http://example.com"
+    },
+    {
+      "icon": "twitter",
+      "url": "http://example.com"
+    },
+    {
+      "icon": "dribble",
+      "url": "http://example.com"
+    },
+    {
+      "icon": "behance",
+      "url": "http://example.com"
+    }
+  ],
+  "menus": [
+    {
+      "name": "Terms of Use",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    },
+    {
+      "name": "Sitemap",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    },
+    {
+      "name": "Contact",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    }
+  ]
+}

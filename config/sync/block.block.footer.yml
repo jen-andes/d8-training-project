@@ -1,0 +1,25 @@
+uuid: dd9dc7dd-3c1b-47a9-a4ab-b2c5017b5b22
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_block:99800d13-4679-4498-9c16-0074de0e3fa3'
+  module:
+    - block_content
+  theme:
+    - d8training
+id: footer
+theme: d8training
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:99800d13-4679-4498-9c16-0074de0e3fa3'
+settings:
+  id: 'block_content:99800d13-4679-4498-9c16-0074de0e3fa3'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

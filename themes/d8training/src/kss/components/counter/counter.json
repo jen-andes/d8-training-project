@@ -1,5 +1,5 @@
 {
-  "background_image": "../../src/kss/components/counter/images/about-counter-bg.jpg",
+  "background_image": "../../src/kss/components/counter/images/about_counter_bgr.jpg",
   "counters" : [
     {
       "icon": "fa fa-heart-o",

@@ -1,0 +1,82 @@
+uuid: fd62640f-407f-49ae-94f2-b66d94bf23c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block
+    - field.field.block_content.footer_block.field_caption
+    - field.field.block_content.footer_block.field_email
+    - field.field.block_content.footer_block.field_image
+    - field.field.block_content.footer_block.field_phone
+    - field.field.block_content.footer_block.field_short_desc
+    - field.field.block_content.footer_block.field_social_link
+    - image.style.thumbnail
+  module:
+    - image
+    - paragraphs
+id: block_content.footer_block.default
+targetEntityType: block_content
+bundle: footer_block
+mode: default
+content:
+  field_caption:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_phone:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_short_desc:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_link:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

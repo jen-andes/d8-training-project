@@ -1,13 +1,12 @@
 <?php
 
 namespace Drupal\d8t_system;
-
-use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Menu\MenuTreeParameters;
 
 /**
- * Provides a 'Umby Navigation Simple Menu' block base class.
+ * Provides a 'Simple Menu' class.
  */
-abstract class SimpleMenuBlockBase extends BlockBase {
+class SimpleMenu {
 
   /**
    * Map menu tree into an array.
@@ -50,6 +49,26 @@ abstract class SimpleMenuBlockBase extends BlockBase {
     }
 
     return $result;
+  }
+
+  /**
+   * Get header menu links.
+   */
+  public function getMenu($menuId) {
+    $menu_tree = \Drupal::menuTree();
+    $parameters = new MenuTreeParameters();
+    $parameters->onlyEnabledLinks();
+    $manipulators = [
+      ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+      ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+    ];
+
+    $nav_tree = $menu_tree->load($menuId, $parameters);
+    $nav_tree = $menu_tree->transform($nav_tree, $manipulators);
+
+    return [
+      'items' => $this->simplifyLinks($nav_tree),
+    ];
   }
 
 }

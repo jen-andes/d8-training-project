@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Contains d8t_system.module..
+ */
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\d8t_system\SimpleMenu;
+
+/**
+* Implements block_view_alter().
+*/
+function d8t_system_block_view_alter(array &$build, BlockPluginInterface $block) {
+  if ($build['#id'] == 'footer' || $build['#id'] == 'header') {
+    $build['#pre_render'][] = '_d8t_system_custom_block_pre_render';
+  }
+}
+
+/**
+ * Custom Block pre-render callback
+ */
+function _d8t_system_custom_block_pre_render(array $build) {
+  $id = $build['#id'];
+  $menu_map = ['header' => 'main', 'footer' => 'footer'];
+  $menu_id  = $menu_map[$id];
+  $simpleMenu = new SimpleMenu();
+  $menus = $simpleMenu->getMenu($menu_id);
+  $build['content']['menus'] = $menus['items'];
+  return $build;
+}
+

@@ -1,0 +1,64 @@
+uuid: 5300e73d-3b4a-4634-a7f4-139ef3e0e054
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_block
+    - field.field.block_content.header_block.field_email
+    - field.field.block_content.header_block.field_image
+    - field.field.block_content.header_block.field_phone
+    - field.field.block_content.header_block.field_social_link
+    - image.style.thumbnail
+  module:
+    - image
+    - paragraphs
+id: block_content.header_block.default
+targetEntityType: block_content
+bundle: header_block
+mode: default
+content:
+  field_email:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_phone:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_link:
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

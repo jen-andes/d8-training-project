@@ -1,0 +1,21 @@
+uuid: 27b3e663-e1f1-4dc5-8bf5-7d520124aef0
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_short_desc
+field_name: field_short_desc
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
