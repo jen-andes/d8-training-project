@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Image
+ *
+ * Variables:
+ * - src: File path of the image.
+ * - alt: Alternate text of the image.
+ *
+ * Optional vars:
+ * - attributes:
+ *   - sizes: Single or comma-delimited list of media queries with a width descriptor.
+ *   - srcset: Single or comma-delimited list of image file paths with pixel density descriptor.
+ * - sources[]: Array of picture source attributes.
+ *   - srcset: Single or comma-delimited list of image file paths with pixel density descriptor.
+ *   - media: CSS media query of the source.
+ *   - sizes: Single or comma-delimited list of media queries with a width descriptor.
+ *   - type: Mime type of the source(s).
+ */
+#}
+{% if sources|default() -%}
+  <picture>
+  {% for source in sources %}
+    <source {% for attribute, value in source %}{{ attribute }}="{{ value }}" {% endfor %}/>
+  {% endfor %}
+{%- endif %}
+  <img {% if src|default %}src="{{ src }}" {% endif %}alt="{{ alt }}" {% for attribute, value in attributes %}{{ attribute }}="{{ value }}" {% endfor %}/>
+{% if sources|default -%}
+  </picture>
+{%- endif %}

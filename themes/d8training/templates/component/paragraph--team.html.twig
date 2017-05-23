@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Team' component.
+ */
+#}
+{% set members = [] %}
+{% for citem in content.field_profile_staffs['#items'] %}
+  {% set citem = content.field_profile_staffs[loop.index0] %}
+  {% set citem_entity = pre_render(citem) %}
+
+    {% set social_links = [] %}
+    {% for sitem in citem_entity.field_social_link['#items'] %}
+      {% set sitem = citem_entity.field_social_link[loop.index0] %}
+      {% set sitem_entity = pre_render(sitem) %}
+        {%
+          set link = {
+            'icon': sitem_entity.field_social_icon.0['#markup'],
+            'link': sitem_entity.field_link.0['#url'].toString(),
+          }
+        %}
+      {% set social_links = social_links|merge([link]) %}
+    {% endfor %}
+
+    {%
+      set member = {
+        'name': citem_entity.title.0['#context'].value,
+        'desc': citem_entity.field_desc.0['#context'].value,
+        'image': image_attr(citem_entity.field_image),
+        'social_links': social_links,
+      }
+    %}
+  {% set members = members|merge([member]) %}
+{% endfor %}
+
+{{ attach_library('d8training/team') }}
+{% include '@d8training/team/team.twig' with {
+    'kicker': content.field_kicker.0['#context'].value,
+    'title': content.field_title.0['#context'].value,
+    'members': members,
+  } only
+%}

@@ -27,4 +27,3 @@ function _d8t_system_custom_block_pre_render(array $build) {
   $build['content']['menus'] = $menus['items'];
   return $build;
 }
-

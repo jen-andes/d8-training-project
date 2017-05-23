@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Menu
+ *
+ * Available variables:
+ * - kicker: The highlighted title.
+ * - title: The title.
+ * - categories[]: An array of menu category.
+ *   - id: The machine name of tag.
+ *   - name: The tag label.
+ * - menus[]: An array of menus.
+ *   - name: The menu name.
+ *   - price: The price of menu.
+ *   - image: The menu image. 
+ *     - src: Source path of the image
+ *     - alt: Alternate text of the image
+ *   - categories: The concatenated menu categories separated by space.
+ */
+#}
+<section class="menus-area section-padding" id="menu">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="area-title text-center">
+          <h2>{{ kicker }}</h2>
+          <h3>{{ title }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="food-menu-list-menu">
+          <ul>
+            {% if categories is not empty %}
+            <li class="filter active" data-filter="all">All</li>
+            {% endif %}
+            {% for category in categories %}
+            <li class="filter" data-filter=".{{ category.id }}">{{ category.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row food-menu-list">
+      {% for menu in menus %}
+      <div class="mix col-md-3 col-lg-3 col-sm-6 col-xs-12 single-menu {{ menu.categories }}">
+        <div class="food-menu-img">
+          {% include '@d8training/image/image.twig' with menu.image only %}
+        </div>
+        <div class="food-menu-details">
+          <h4>{{ menu.name }}</h4>
+          <p class="menu-price">{{ menu.price }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

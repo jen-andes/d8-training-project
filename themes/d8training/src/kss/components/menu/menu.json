@@ -1,0 +1,100 @@
+{ 
+  "kicker": "Delicious",
+  "title": "Today's Menu",
+  "categories": [
+    { 
+      "id": "breakfast",
+      "name": "Breakfast"
+    },
+    { 
+      "id": "lunch",
+      "name": "Lunch"
+    },
+    { 
+      "id": "dinner",
+      "name": "Dinner"
+    },
+    { 
+      "id": "Coffee",
+      "name": "Coffee"
+    },
+    { 
+      "id": "snacks",
+      "name": "Snacks"
+    }
+  ],
+  "menus": [
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "breakfast coffee snacks"
+    },
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "dinner snacks"
+    },
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "breakfast"
+    },
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "dinner lunch breakfast snacks"
+    },
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "lunch coffee"
+    },
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "breakfast"
+    },
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "lunch dinner"
+    },
+    {
+      "name": "Cupcake Recipes",
+      "price": "$120",
+      "image": {
+        "src": "../../src/kss/components/menu/images/menu_1.jpg",
+        "alt": ""
+      },
+      "categories": "lunch dinner"
+    }
+  ]
+}

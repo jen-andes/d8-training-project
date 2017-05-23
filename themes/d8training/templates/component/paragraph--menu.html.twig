@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Menu' component.
+ */
+#}
+{{ attach_library('d8training/menu') }}
+{% include '@d8training/menu/menu.twig' with {
+    'kicker': content.field_kicker.0['#context'].value,
+    'title': content.field_title.0['#context'].value,
+    'categories': content.categories,
+    'menus': content.menus,
+  } only
+%}

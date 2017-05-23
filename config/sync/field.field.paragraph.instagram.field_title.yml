@@ -1,0 +1,19 @@
+uuid: ef8977c3-5a24-465f-9307-ccd13c020539
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.instagram
+id: paragraph.instagram.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: instagram
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

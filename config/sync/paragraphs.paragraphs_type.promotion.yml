@@ -1,0 +1,7 @@
+uuid: 073729d8-6e6f-4850-83f5-d439ffa4e870
+langcode: en
+status: true
+dependencies: {  }
+id: promotion
+label: Promotion
+behavior_plugins: {  }

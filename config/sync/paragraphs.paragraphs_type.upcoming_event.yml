@@ -1,0 +1,7 @@
+uuid: ab9c7de1-bec6-49d1-b40f-644a348c4fda
+langcode: en
+status: true
+dependencies: {  }
+id: upcoming_event
+label: 'Upcoming Event'
+behavior_plugins: {  }

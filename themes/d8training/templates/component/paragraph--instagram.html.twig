@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Instagram' component.
+ */
+#}
+
+{{ attach_library('d8training/instagram') }}
+{% include '@d8training/instagram/instagram.twig' with {
+    'kicker': content.field_kicker.0['#context'].value,
+    'title': content.field_title.0['#context'].value,
+  } only
+%}

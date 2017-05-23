@@ -11,8 +11,35 @@ dependencies:
     - field.field.block_content.header_block.field_social_link
     - image.style.thumbnail
   module:
+    - field_group
     - image
     - paragraphs
+third_party_settings:
+  field_group:
+    group_social:
+      children:
+        - field_social_link
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Social Links'
+    group_hero:
+      children:
+        - field_slideshow
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Hero
 id: block_content.header_block.default
 targetEntityType: block_content
 bundle: header_block
@@ -60,7 +87,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    type: paragraphs
+    type: entity_reference_paragraphs
     region: content
   info:
     type: string_textfield

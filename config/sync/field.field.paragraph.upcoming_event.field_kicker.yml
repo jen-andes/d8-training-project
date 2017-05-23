@@ -1,0 +1,19 @@
+uuid: 31cbf187-2470-4449-abe0-3e914346e160
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_kicker
+    - paragraphs.paragraphs_type.upcoming_event
+id: paragraph.upcoming_event.field_kicker
+field_name: field_kicker
+entity_type: paragraph
+bundle: upcoming_event
+label: Kicker
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

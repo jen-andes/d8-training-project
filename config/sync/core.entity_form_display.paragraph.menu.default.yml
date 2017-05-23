@@ -1,0 +1,41 @@
+uuid: adc9839c-2289-4fec-baac-78e9a467312f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.menu.field_boolean
+    - field.field.paragraph.menu.field_kicker
+    - field.field.paragraph.menu.field_title
+    - paragraphs.paragraphs_type.menu
+id: paragraph.menu.default
+targetEntityType: paragraph
+bundle: menu
+mode: default
+content:
+  field_boolean:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_kicker:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,20 @@
+uuid: 4e08e8d8-36c6-444d-b898-40690d9cb96d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_profile_staffs
+field_name: field_profile_staffs
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

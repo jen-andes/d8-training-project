@@ -3,20 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.profile.field_behance
     - field.field.node.profile.field_desc
-    - field.field.node.profile.field_dribble
-    - field.field.node.profile.field_facebook
     - field.field.node.profile.field_image
-    - field.field.node.profile.field_instagram
     - field.field.node.profile.field_profile_type
-    - field.field.node.profile.field_twitter
+    - field.field.node.profile.field_social_link
     - image.style.thumbnail
     - node.type.profile
   module:
+    - field_group
     - image
-    - link
+    - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_social:
+      children:
+        - field_social_link
+      parent_name: ''
+      weight: 9
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Social Media'
 id: node.profile.default
 targetEntityType: node
 bundle: profile
@@ -28,14 +39,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_behance:
-    weight: 11
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_desc:
     weight: 8
     settings:
@@ -43,22 +46,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_dribble:
-    weight: 13
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_facebook:
-    weight: 10
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   field_image:
     weight: 7
@@ -68,27 +55,23 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_instagram:
-    weight: 12
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_profile_type:
     weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_twitter:
-    weight: 9
+  field_social_link:
+    type: entity_reference_paragraphs
+    weight: 26
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: link_default
     region: content
   path:
     type: path

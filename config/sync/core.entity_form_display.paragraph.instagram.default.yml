@@ -1,0 +1,33 @@
+uuid: 47de70cf-9c9d-491d-93c0-ac4650e176e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.instagram.field_kicker
+    - field.field.paragraph.instagram.field_title
+    - paragraphs.paragraphs_type.instagram
+id: paragraph.instagram.default
+targetEntityType: paragraph
+bundle: instagram
+mode: default
+content:
+  field_kicker:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -8,6 +8,7 @@ module:
   config: 0
   contextual: 0
   ctools: 0
+  d8t_component: 0
   d8t_system: 0
   datetime: 0
   dblog: 0
@@ -29,8 +30,6 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  page_manager: 0
-  page_manager_ui: 0
   path: 0
   quickedit: 0
   rdf: 0

@@ -1,9 +1,13 @@
 uuid: 7ee55aff-c6a4-40e4-ad14-30f9cee6f51b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.profile.field_desc
+    - field.field.node.profile.field_image
+    - field.field.node.profile.field_profile_type
+    - field.field.node.profile.field_social_link
     - node.type.profile
   module:
     - user
@@ -15,4 +19,8 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_desc: true
+  field_image: true
+  field_profile_type: true
+  field_social_link: true

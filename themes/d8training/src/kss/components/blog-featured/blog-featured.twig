@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Blog Featured
+ *
+ * Available variables:
+ * - kicker: The highlighted title.
+ * - title: The title.
+ * - blogs[]: An array of blogs.
+ *   - image: The blog featured image. 
+ *     - src: Source path of the image.
+ *     - alt: Alternate text of the image.
+ *   - category: The blog category.
+ *   - title: The title of the blog entry.
+ *   - url: The blog url path. 
+ *   - date: Posted date.
+ */
+#}
+<section class="blog-area section-padding">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="area-title text-center">
+          <h2>{{ kicker }}</h2>
+          <h3>{{ title }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for blog in blogs %}
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="single-post text-center">
+          <div class="blog-post-img ">
+            {% if blog.image %}
+              {% include '@d8training/image/image.twig' with blog.image only %}
+            {% endif %}
+          </div>
+          <div class="post-details">
+            <a href="#" class="post-meta-button">{{ blog.category }}</a>
+            <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+            <p class="post-meta"><a href="#">{{ blog.date }}</a></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+uuid: 51e075e5-014d-4014-9a65-48904ce60385
+langcode: en
+status: true
+dependencies: {  }
+id: featured_blog
+label: 'Featured Blog'
+behavior_plugins: {  }
