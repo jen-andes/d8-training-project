@@ -1,7 +1,8 @@
 global:
   css:
+    base:
+      dist/css/global.css: {}
     theme:
-      dist/css/base.css: {}
       vendor-dist/css/responsive.css: {}
       vendor-dist/css/bootstrap.min.css: {}
       vendor-dist/css/animate.css: {}
@@ -14,12 +15,6 @@ global:
   dependencies:
     - core/drupal
     - core/jquery
-    - d8training/base
-
-base:
-  css:
-    theme:
-      dist/css/base.css: {}
 
 about:
   css:
