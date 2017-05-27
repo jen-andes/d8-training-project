@@ -1,0 +1,26 @@
+uuid: 22727d98-458c-4c31-afa7-38fa4f928217
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_profile_staffs
+    - paragraphs.paragraphs_type.team
+id: paragraph.team.field_profile_staffs
+field_name: field_profile_staffs
+entity_type: paragraph
+bundle: team
+label: Profiles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: profile
+      display_name: entityref
+      arguments:
+        - staff
+field_type: entity_reference

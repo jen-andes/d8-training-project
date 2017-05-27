@@ -1,0 +1,7 @@
+uuid: d5dc7d0c-50b6-4ece-b049-177786552bdb
+langcode: en
+status: true
+dependencies: {  }
+id: instagram
+label: Instagram
+behavior_plugins: {  }

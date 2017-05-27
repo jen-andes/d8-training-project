@@ -1,0 +1,53 @@
+uuid: 38ef3bec-8289-433e-b438-f41cd6456aee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.upcoming_event.field_image
+    - field.field.paragraph.upcoming_event.field_kicker
+    - field.field.paragraph.upcoming_event.field_max_num
+    - field.field.paragraph.upcoming_event.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.upcoming_event
+  module:
+    - image
+id: paragraph.upcoming_event.default
+targetEntityType: paragraph
+bundle: upcoming_event
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_kicker:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_max_num:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

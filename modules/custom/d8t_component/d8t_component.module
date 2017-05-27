@@ -1,0 +1,146 @@
+<?php
+/**
+ * @file
+ * Contains d8t_component.module..
+ */
+
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
+
+/**
+* Implements hook_preprocess_entity().
+*/
+function d8t_component_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $paragraph_type = $paragraph->getType();
+  $content = $variables['content'];
+
+  // Menu.
+  if ($paragraph_type == 'menu') {
+    $items = _d8t_component_paragraph_menu_content();
+    $variables['content']['menus'] = $items['menus'];
+    $variables['content']['categories'] = $items['categories'];
+  }
+
+  // Upcoming Event.
+  if ($paragraph_type == 'upcoming_event') {
+    $max_num = $content['field_max_num'][0]['#markup'];
+    $items = _d8t_component_paragraph_event_content($max_num);
+    $variables['content']['events'] = $items;
+  }
+}
+
+/**
+* Helper function to get the field value.
+*/
+function d8t_component_get_entity_value($node, $fieldname, $prefix = null, $type = 'text') {
+  $output = '';
+  if($node->get($fieldname)->isEmpty()) {
+    return $output;
+  }
+
+  $field = $node->get($fieldname)->getValue();
+  if($type == 'image') {
+    $file   = File::load($field[0]['target_id']);
+    $uri    = $file->getFileUri();
+    $output = array(
+      'src' => isset($uri) ? file_create_url($uri) : NULL,
+      'alt' => $field[0]['alt'],
+    );
+  }elseif($type == 'term') {
+    $output = $field;
+  }else{
+    $output = $field[0]['value'];
+    if(!is_null($prefix)) {
+      $output = $prefix . $field[0]['value'];
+    }
+  }
+
+  return $output;
+}
+
+/**
+* Helper function to get list of menus.
+*/
+function _d8t_component_paragraph_menu_content() {
+  $vid = 'menu_category';
+  $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+  $categories = [];
+  foreach ($terms as $key => $term) {
+    $categories[] = [
+      'id' => 'term' . $term->tid,
+      'name' => $term->name,
+    ];
+  }
+
+  $menus = [];
+  $query = \Drupal::entityQuery('node');
+  $nids = $query->condition('type', 'product')
+    ->condition('status', 1)
+    ->sort('created', 'DESC')
+    ->range(0, 8)
+    ->execute();
+  $nodes = Node::loadMultiple($nids);
+
+  foreach ($nodes as $key => $node) {
+    if ($node->get('field_menu_category')->isEmpty()) {
+      continue;
+    }
+    $price = d8t_component_get_entity_value($node, 'field_cost', '$');
+    $image = d8t_component_get_entity_value($node, 'field_image', null, 'image');
+    $cats  = d8t_component_get_entity_value($node, 'field_menu_category', null, 'term');
+    $prodcats = [];
+    foreach ($cats as $key => $cat) {
+      $prodcats[] = 'term' . $cat['target_id'];
+    }
+    $product_categories = '';
+    if (!empty($prodcats)) {
+      $product_categories = implode(" ", $prodcats);
+    }
+    $menus[] = array(
+      'name' => $node->getTitle(),
+      'price' => $price,
+      'image' => $image,
+      'categories' => $product_categories,
+    );
+  }
+      
+  return [
+    'categories' => $categories,
+    'menus' => $menus,
+  ];
+}
+
+/**
+* Helper function to get list of event.
+*/
+function _d8t_component_paragraph_event_content($max_num) {
+  $query = \Drupal::entityQuery('node');
+  $nids = $query->condition('type', 'event')
+    ->condition('status', 1)
+    ->sort('field_date', 'DESC')
+    ->range(0, $max_num)
+    ->execute();
+  $nodes = Node::loadMultiple($nids);
+
+  $events = [];
+  foreach ($nodes as $key => $node) {
+    $image = d8t_component_get_entity_value($node, 'field_featured_image', null, 'image');
+    $add   = d8t_component_get_entity_value($node, 'field_address');
+    $desc  = d8t_component_get_entity_value($node, 'field_desc');
+    $date  = d8t_component_get_entity_value($node, 'field_date');
+
+    $edate['mon'] = date('F', strtotime($date));
+    $edate['day'] = date('d', strtotime($date));
+
+    $events[] = array(
+      'title' => $node->getTitle(),
+      'image' => $image,
+      'location' => $add,
+      'desc' => $desc,
+      'date' => $edate,
+    );
+  }
+
+  return $events;
+}

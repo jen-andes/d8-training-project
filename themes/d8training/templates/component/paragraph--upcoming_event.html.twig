@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Upcoming Events' component.
+ */
+#}
+
+{{ attach_library('d8training/event-list') }}
+{% include '@d8training/event-list/event-list.twig' with {
+    'kicker': content.field_kicker.0['#context'].value,
+    'title': content.field_title.0['#context'].value,
+    'bg': image_attr(content.field_image),
+    'events': content.events,
+  } only
+%}

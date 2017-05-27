@@ -3,7 +3,7 @@
   "phone": "+1 800 234 5678",
   "cta": {
     "url": "/reservation",
-    "label": "Book a table"
+    "text": "Book a table"
   },
   "homepage_url": "#",
   "logo": "../../src/kss/components/header/images/main_logo.png",
@@ -89,5 +89,9 @@
       "is_active": false,
       "submenus": []
     }
-  ]
+  ],
+  "search_form": {
+    "name": "Search",
+    "placeholder": "Search..."
+  }
 }

@@ -5,36 +5,37 @@
     attach: function (context) {
 
       /*--------------------------
-          STICKY MAINMENU
+        STICKY MAINMENU
       ---------------------------*/
       $("#mainmenu-area").sticky({
         topSpacing: 0
       });
+      
+      /* -------------------------
+        SCROLLSPY ACTIVE
+      -------------------------- */
+      /*$('body').scrollspy({
+        target: '.bs-example-js-navbar-scrollspy',
+        offset: 50
+      });*/
 
-      /*----------------------------
-          OPEN SEARCH FORM
-      ----------------------------*/
-      var $searchForm = $('.search-form');
-      var $searchFormTrigger = $('.search-form-trigger', context);
-      var $formOverlay = $('.search-form-overlay');
-      $searchFormTrigger.on('click', function (event) {
-        event.preventDefault();
-        toggleSearch();
-      });
-
-      function toggleSearch(type) {
-        if (type === "close") {
-          //close serach 
-          $searchForm.removeClass('is-visible');
-          $searchFormTrigger.removeClass('search-is-visible');
-        } else {
-          //toggle search visibility
-          $searchForm.toggleClass('is-visible');
-          $searchFormTrigger.toggleClass('search-is-visible');
-          if ($searchForm.hasClass('is-visible')) $searchForm.find('input[type="search"]').focus();
-          $searchForm.hasClass('is-visible') ? $formOverlay.addClass('is-visible') : $formOverlay.removeClass('is-visible');
-        }
+      /*--------------------------------
+          DROPDOWN MOBILE MENU
+      ----------------------------------*/
+      function doneResizing() {
+          if (Modernizr.mq('screen and (max-width:991px)')) {
+              $('.at-drop-down').on('click', function (e) {
+                  e.preventDefault();
+                  $(this).next($('.sub-menu')).slideToggle();
+              });
+          }
       }
+      var id;
+      $(window).resize(function () {
+          clearTimeout(id);
+          id = setTimeout(doneResizing, 0);
+      });
+      doneResizing();
 
     }
   };

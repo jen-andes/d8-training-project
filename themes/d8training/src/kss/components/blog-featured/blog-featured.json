@@ -1,0 +1,26 @@
+{
+  "kicker": "News",
+  "title": "From the Blog",
+  "blogs": [
+    {
+      "image": {
+        "src": "../../src/kss/components/blog-featured/images/blog-1.jpg",
+        "alt": ""
+      },
+      "category": "Lifestyle",
+      "title": "Gravida posure quam eraseno seque rutrume rigular",
+      "url": "#",
+      "date": "24 February 2017"
+    },
+    {
+      "image": {
+        "src": "../../src/kss/components/blog-featured/images/blog-1.jpg",
+        "alt": ""
+      },
+      "category": "Events",
+      "title": "Posure quam eraseno seque rutrume rigular",
+      "url": "#",
+      "date": "13 January 2017"
+    }
+  ]
+}

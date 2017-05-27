@@ -1,0 +1,41 @@
+uuid: 11e069f5-4ec9-454d-9e42-0a610beaa389
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.menu.field_boolean
+    - field.field.paragraph.menu.field_kicker
+    - field.field.paragraph.menu.field_title
+    - paragraphs.paragraphs_type.menu
+id: paragraph.menu.default
+targetEntityType: paragraph
+bundle: menu
+mode: default
+content:
+  field_boolean:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_kicker:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

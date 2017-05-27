@@ -1,0 +1,23 @@
+uuid: 34045139-031f-415b-8cb4-03fc959ec97d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_max_num
+    - paragraphs.paragraphs_type.upcoming_event
+id: paragraph.upcoming_event.field_max_num
+field_name: field_max_num
+entity_type: paragraph
+bundle: upcoming_event
+label: 'Number of events to display'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

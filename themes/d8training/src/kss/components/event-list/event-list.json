@@ -1,0 +1,33 @@
+{
+  "bg": "../../src/kss/components/event-list/images/event_area_bg.jpg",
+  "kicker": "Events",
+  "title": "Upcoming Events",
+  "events": [
+    {
+      "title": "Katherine Ryan to host Event Awards 2017",
+      "image": {
+        "src": "../../src/kss/components/event-list/images/event_1.jpg",
+        "alt": ""
+      },
+      "date": {
+        "day": "17",
+        "mon": "January"
+      },
+      "location": "196 Manhattan, MY, USA",
+      "desc": "Comedian Katherine Ryan will present this year's Event Awards on 13 October at the iconic Eventim Apollo in Hammersmith, London."
+    },
+    {
+      "title": "Online event registration done better",
+      "image": {
+        "src": "../../src/kss/components/event-list/images/event_1.jpg",
+        "alt": ""
+      },
+      "date": {
+        "day": "22",
+        "mon": "December"
+      },
+      "location": "146 Manhattan, MY, USA",
+      "desc": "Comedian Katherine Ryan will present this year's Event Awards on 13 October at the iconic Eventim Apollo in Hammersmith, London."
+    }
+  ]
+}

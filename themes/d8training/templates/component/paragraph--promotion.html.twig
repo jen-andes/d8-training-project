@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Promotion' component.
+ */
+#}
+{% set bg_image = image_attr(content.field_image) %}
+{% set promotions = [] %}
+{% for citem in content.field_promo_product['#items'] %}
+  {% set citem = content.field_promo_product[loop.index0] %}
+  {% set citem_entity = pre_render(citem) %}
+    {% set image = image_attr(citem_entity.field_image) %}
+    {%
+      set promo = {
+        'price': '$5',
+        'price_label': 'From',
+        'image': image_attr(citem_entity.field_image),
+        'bg': image.src,
+        'title': '',
+        'cta': {
+          'text': 'Order Now',
+          'url': '#',
+        },
+      }
+    %}
+  {% set promotions = promotions|merge([promo]) %}
+{% endfor %}
+
+{{ attach_library('d8training/promotions') }}
+{% include '@d8training/promotions/promotions.twig' with {
+    'kicker': content.field_kicker.0['#context'].value,
+    'title': content.field_title.0['#context'].value,
+    'bg': bg_image,
+    'items': promotions,
+  } only
+%}

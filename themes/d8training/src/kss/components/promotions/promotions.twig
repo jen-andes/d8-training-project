@@ -1,33 +1,52 @@
-<!--PROMOTIONS AREA-->
+{#
+/**
+ * @file
+ * Promotions
+ *
+ * Available variables:
+ * - bg: The background image url.
+ * - kicker: The highlighted title.
+ * - title: The title.
+ * - items[]: An array of promotions.
+ *   - price: The item price.
+ *   - price_label: The price label.  
+ *   - image: The item image.
+ *     - src: Source path of the image
+ *     - alt: Alternate text of the image
+ *   - title: The item title.
+ *   - cta: The cta link.
+ *     - text: The button text.
+ *     - url: The link url.
+ */
+#}
 <section class="promotions-area section-padding">
-    <div class="promotion-area-bg"></div>
-    <div class="container wow fadeIn">
-        <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                <div class="area-title text-center">
-                    <h2>{{ kicker }}</h2>
-                    <h3>{{ title }}</h3>
-                </div>
-            </div>
+  <div class="promotion-area-bg" style="background: rgba(0, 0, 0, 0) url('{{ bg.src }}') no-repeat fixed 0 0 / cover"></div>
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="area-title text-center">
+          <h2>{{ kicker }}</h2>
+          <h3>{{ title }}</h3>
         </div>
-        <div class="row">
-            {% for item in items %}
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                <div class="single-promotions text-center">
-                    <div class="promotions-img">
-                        <img src="{{ item.image }}" alt="">
-                        <div class="pakage-rate">
-                            <p>{{ item.price_label }} <span>{{ item.price }}</span></p>
-                        </div>
-                    </div>
-                    <div class="promotions-details">
-                        <h4>{{ item.title }}</h4>
-                        <a href="{{ item.cta.url }}" class="read-more">{{ item.cta.title }}</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+      </div>
     </div>
+    <div class="row">
+      {% for item in items %}
+      <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+        <div class="single-promotions text-center">
+          <div class="promotions-img">
+            <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
+            <div class="pakage-rate">
+                <p>{{ item.price_label }} <span>{{ item.price }}</span></p>
+            </div>
+          </div>
+          <div class="promotions-details">
+            <h4>{{ item.title }}</h4>
+            <a href="{{ item.cta.url }}" class="read-more">{{ item.cta.text }}</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
-<!--PROMOTIONS AREA END-->

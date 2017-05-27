@@ -1,8 +1,31 @@
-@todo - template integration
+{#
+/**
+ * @file
+ * Theme override to display a 'Slideshow' component.
+ */
+#}
 
 {% set slides = [] %}
-{% for slide in content.field_slide['#items'] %}
-  {% set slide = content.field_slide[loop.index0] %}
-
-
+{% for citem in content.field_slide['#items'] %}
+  {% set citem = content.field_slide[loop.index0] %}
+  {% set citem_entity = pre_render(citem) %}
+    {% set image = image_attr(citem_entity.field_image) %}
+    {%
+      set slide = {
+        'bg': image.src,
+        'title': citem_entity.field_title.0['#context'].value,
+        'subtitle': citem_entity.field_sub_title.0['#context'].value,
+        'cta': {
+          'url': citem_entity.field_cta.0['#url'].toString(),
+          'text': citem_entity.field_cta.0['#title']
+        },
+      }
+    %}
+  {% set slides = slides|merge([slide]) %}
 {% endfor %}
+
+{{ attach_library('d8training/slider') }}
+{% include '@d8training/slider/slider.twig' with {
+    'slides': slides
+  } only
+%}

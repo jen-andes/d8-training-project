@@ -1,0 +1,55 @@
+uuid: 113dd39e-d5fa-4ede-ba27-acbc94db3954
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promotion.field_image
+    - field.field.paragraph.promotion.field_kicker
+    - field.field.paragraph.promotion.field_promo_product
+    - field.field.paragraph.promotion.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.promotion
+  module:
+    - image
+id: paragraph.promotion.default
+targetEntityType: paragraph
+bundle: promotion
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_kicker:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_promo_product:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

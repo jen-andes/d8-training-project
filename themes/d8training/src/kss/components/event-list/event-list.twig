@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Event List
+ *
+ * Available variables:
+ * - bg: The background image.
+ *   - src: Source path of the image.
+ *   - alt: Alternate text of the image.
+ * - kicker: The highlighted title.
+ * - title: The title.
+ * - events[]: An array of events.
+ *   - title: The title of the event.
+ *   - image: The event image. 
+ *     - src: Source path of the image.
+ *     - alt: Alternate text of the image.
+ *   - date: The event date.
+ *     - day: The date day.
+ *     - mon: The date month.
+ *   - location: The location of the event.
+ *   - desc: The short description of the event.
+ */
+#}
+<section class="event-area section-padding">
+  {% if bg %}
+  <div class="event-area-bg" style="background: rgba(0, 0, 0, 0) url('{{ bg.src }}') no-repeat scroll center center / cover;"></div>
+  {% endif %}
+
+  <div class="container wow fadeIn">
+    
+    {% if title -%}
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+          <div class="area-title text-center">
+            <h2>{{ kicker }}</h2>
+            <h3>{{ title }}</h3>
+          </div>
+        </div>
+      </div>
+    {%- endif %}
+
+    <div class="row event-list">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        {% for event in events %}
+        <div class="single-event">
+          <div class="event-img">
+            {% include '@d8training/image/image.twig' with event.image only %}
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <p><span>{{ event.date.day }}</span>{{ event.date.mon }}</p>
+            </div>
+            <div class="event-details">
+              <h3><a href="single-event.html">{{ event.title }}</a></h3>
+              <p class="event-meta">{{ event.location }}</p>
+              <p>{{ event.desc }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+</section>

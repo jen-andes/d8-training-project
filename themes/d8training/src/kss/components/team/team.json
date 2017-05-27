@@ -1,0 +1,156 @@
+{
+  "kicker": "Delicious",
+  "title": "Awesome Chefs",
+  "members": [
+    {
+      "name": "Mark Angelila",
+      "desc": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/team/images/team-1.jpg",
+        "alt": ""
+      },
+      "social_links": [
+        {
+          "link": "#",
+          "icon": "facebook"
+        },
+        {
+          "link": "#",
+          "icon": "twitter"
+        },
+        {
+          "link": "#",
+          "icon": "behance"
+        },
+        {
+          "link": "#",
+          "icon": "instagram"
+        },
+        {
+          "link": "#",
+          "icon": "dribbble"
+        }
+      ]
+    },
+    {
+      "name": "Angel Meskat",
+      "desc": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/team/images/team-1.jpg",
+        "alt": "Team 2"
+      },
+      "social_links": [
+        {
+          "link": "#",
+          "icon": "facebook"
+        },
+        {
+          "link": "#",
+          "icon": "twitter"
+        },
+        {
+          "link": "#",
+          "icon": "behance"
+        },
+        {
+          "link": "#",
+          "icon": "instagram"
+        },
+        {
+          "link": "#",
+          "icon": "dribbble"
+        }
+      ]
+    },
+    {
+      "name": "John Doe",
+      "desc": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/team/images/team-1.jpg",
+        "alt": "Team 3"
+      },
+      "social_links": [
+        {
+          "link": "#",
+          "icon": "facebook"
+        },
+        {
+          "link": "#",
+          "icon": "twitter"
+        },
+        {
+          "link": "#",
+          "icon": "behance"
+        },
+        {
+          "link": "#",
+          "icon": "instagram"
+        },
+        {
+          "link": "#",
+          "icon": "dribbble"
+        }
+      ]
+    },
+    {
+      "name": "Jane Smith",
+      "desc": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/team/images/team-1.jpg",
+        "alt": "Team 4"
+      },
+      "social_links": [
+        {
+          "link": "#",
+          "icon": "facebook"
+        },
+        {
+          "link": "#",
+          "icon": "twitter"
+        },
+        {
+          "link": "#",
+          "icon": "behance"
+        },
+        {
+          "link": "#",
+          "icon": "instagram"
+        },
+        {
+          "link": "#",
+          "icon": "dribbble"
+        }
+      ]
+    },
+    {
+      "name": "Park Ji Sung",
+      "desc": "Cras senunc massa quisque tempor dolor sit amet",
+      "image": {
+        "src": "../../src/kss/components/team/images/team-1.jpg",
+        "alt": "Team 5"
+      },
+      "social_links": [
+        {
+          "link": "#",
+          "icon": "facebook"
+        },
+        {
+          "link": "#",
+          "icon": "twitter"
+        },
+        {
+          "link": "#",
+          "icon": "behance"
+        },
+        {
+          "link": "#",
+          "icon": "instagram"
+        },
+        {
+          "link": "#",
+          "icon": "dribbble"
+        }
+      ]
+    }
+  ]
+}

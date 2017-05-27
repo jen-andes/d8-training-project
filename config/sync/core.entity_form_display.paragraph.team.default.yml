@@ -1,0 +1,43 @@
+uuid: 3f81c7a1-b276-4a53-a12f-bee5ce85bb6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team.field_kicker
+    - field.field.paragraph.team.field_profile_staffs
+    - field.field.paragraph.team.field_title
+    - paragraphs.paragraphs_type.team
+id: paragraph.team.default
+targetEntityType: paragraph
+bundle: team
+mode: default
+content:
+  field_kicker:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_staffs:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

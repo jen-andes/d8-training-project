@@ -1,0 +1,7 @@
+# Twig Pre Render Extension Services
+services:
+  d8t_system.twig.pre_render_extension:
+    arguments: ['@renderer', '@url_generator', '@theme.manager', '@date.formatter', '@controller_resolver']
+    class: Drupal\d8t_system\TwigExtension\PreRenderExtension
+    tags:
+      - { name: twig.extension }

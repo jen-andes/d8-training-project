@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Featured Blog' component.
+ */
+#}
+
+{% set blogs = [] %}
+{% for citem in content.field_featured_blog['#items'] %}
+  {% set citem = content.field_featured_blog[loop.index0] %}
+  {% set citem_entity = pre_render(citem) %}
+    {%
+      set blog = {
+        'title': citem_entity.title.0['#context'].value,
+        'url': 'test',
+        'category': 'teat',
+        'image': image_attr(citem_entity.field_featured_image),
+        'date': 'ddate',
+      }
+    %}
+  {% set blogs = blogs|merge([blog]) %}
+{% endfor %}
+
+{{ attach_library('d8training/blog-featured') }}
+{% include '@d8training/blog-featured/blog-featured.twig' with {
+    'kicker': content.field_kicker.0['#context'].value,
+    'title': content.field_title.0['#context'].value,
+    'blogs': blogs,
+  } only
+%}

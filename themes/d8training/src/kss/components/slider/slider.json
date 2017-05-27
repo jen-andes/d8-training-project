@@ -5,7 +5,7 @@
       "subtitle": "OWL Cafe & Restaurant",
       "bg": "../../src/kss/components/slider/images/slide_1.jpg",
       "cta": {
-        "title": "Reservation Now",
+        "text": "Reservation Now",
         "url": "/reservation"
       }
     },
@@ -14,7 +14,7 @@
       "subtitle": "See What's new today",
       "bg": "../../src/kss/components/slider/images/slide_2.jpg",
       "cta": {
-        "title": "Todays Menu",
+        "text": "Todays Menu",
         "url": "#"
       }
     },
@@ -23,7 +23,7 @@
       "subtitle": "to Join with us",
       "bg": "../../src/kss/components/slider/images/slide_3.jpg",
       "cta": {
-        "title": "Book A Table",
+        "text": "Book A Table",
         "url": "/reservation"
       }
     }

@@ -1,0 +1,51 @@
+uuid: 5c1ae1da-bc41-4b5e-bfe1-099aeb34544d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_link
+    - node.type.profile
+    - paragraphs.paragraphs_type.social_link
+  module:
+    - entity_reference_revisions
+id: node.profile.field_social_link
+field_name: field_social_link
+entity_type: node
+bundle: profile
+label: 'Social Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_link: social_link
+    target_bundles_drag_drop:
+      about:
+        weight: 9
+        enabled: false
+      menu:
+        weight: 10
+        enabled: false
+      promotion:
+        weight: 11
+        enabled: false
+      slide:
+        weight: 12
+        enabled: false
+      slideshow:
+        weight: 13
+        enabled: false
+      social_link:
+        enabled: true
+        weight: 14
+      team:
+        weight: 15
+        enabled: false
+      upcoming_event:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

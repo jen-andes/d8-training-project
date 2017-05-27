@@ -1,0 +1,28 @@
+uuid: 4df5c7fc-1284-4961-9590-0ad243c0fa70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_product
+    - node.type.product
+    - paragraphs.paragraphs_type.promotion
+id: paragraph.promotion.field_promo_product
+field_name: field_promo_product
+entity_type: paragraph
+bundle: promotion
+label: Product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      product: product
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

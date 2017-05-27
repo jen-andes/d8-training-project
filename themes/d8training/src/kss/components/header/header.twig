@@ -16,11 +16,11 @@
  *     - text: The link text.
  *     - url: The link url.
  * - social_links[]: An array of social links.
- *     - icon: The link icon.
- *     - url: The link url.
+ *   - icon: The link icon.
+ *   - url: The link url.
  */
 #}
-<header class="top-area" id="home">
+<header class="top-area">
   <div class="header-top-area">
     <div class="top-bar">
       <div class="container">
@@ -34,7 +34,7 @@
           <div class="col-md-5 col-lg-6 col-sm-4">
             {% if cta is not empty -%}
               <div class="book-table-popup">
-                <a href="{{ cta.url }}">{{ cta.label }}</a>
+                <a href="{{ cta.url }}">{{ cta.text }}</a>
               </div>
             {%- endif %}    
 
@@ -67,15 +67,10 @@
             <a href="{{ homepage_url }}" class="navbar-brand white"><img src="{{ logo|default() }}" alt="logo"></a>
           </div>
           <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
-            <div class="search-form-area">
-              <div class="search-form-overlay"></div>
-              <a class="search-form-trigger" href="#search-form">Search<span></span></a>
-              <div id="search-form" class="search-form">
-                <form>
-                  <input type="search" placeholder="Search...">
-                </form>
-              </div>
-            </div>
+            {% if search_form|default() -%}
+              {% include '@d8training/search-form/search-form.twig' with search_form only %}
+            {%- endif %}
+
             {% if menus is not empty -%}
               <ul id="nav" class="nav navbar-nav cl-effect-11">
                 {% for menu in menus %}
@@ -97,10 +92,10 @@
                 {% endfor %}
               </ul>
             {%- endif %}
+
           </div>
         </div>
       </nav>
     </div>
-
   </div> 
 </header>
