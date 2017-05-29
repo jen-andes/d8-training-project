@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Our Story' component.
+ */
+#}
+
+{{ attach_library('d8training/our-story') }}
+{% include '@d8training/our-story/our-story.twig' with {
+    'type': content.field_story_type.0['#markup'],
+    'kicker': content.field_kicker.0['#context'].value,
+    'description': content.field_plain_text.0['#context'].value,
+    'images': image_attr(content.field_images),
+    'video_image': image_attr(content.field_image),
+    'video_link': content.field_link.0['#url'].toString()
+  } only
+%}

@@ -1,0 +1,7 @@
+uuid: 199840b7-f0f0-49ae-8ecc-6d94e70bb31e
+langcode: en
+status: true
+dependencies: {  }
+id: counter
+label: Counter
+behavior_plugins: {  }

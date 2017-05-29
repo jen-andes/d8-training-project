@@ -1,0 +1,38 @@
+uuid: 2387564f-6afe-4f0f-9bfa-6b516c86e557
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_item.field_kicker
+    - field.field.paragraph.carousel_item.field_plain_text
+    - field.field.paragraph.carousel_item.field_title
+    - paragraphs.paragraphs_type.carousel_item
+id: paragraph.carousel_item.default
+targetEntityType: paragraph
+bundle: carousel_item
+mode: default
+content:
+  field_kicker:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_plain_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

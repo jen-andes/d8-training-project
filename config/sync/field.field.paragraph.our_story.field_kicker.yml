@@ -1,0 +1,19 @@
+uuid: f8229e2b-c84d-4d67-8750-da47f3992815
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_kicker
+    - paragraphs.paragraphs_type.our_story
+id: paragraph.our_story.field_kicker
+field_name: field_kicker
+entity_type: paragraph
+bundle: our_story
+label: Kicker
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

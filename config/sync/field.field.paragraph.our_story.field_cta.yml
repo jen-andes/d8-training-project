@@ -1,16 +1,16 @@
-uuid: d809b221-b40d-44b4-b55e-57cb82b215f4
+uuid: e46da92d-700d-47c2-9e37-585c877b7305
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_cta
-    - paragraphs.paragraphs_type.about
+    - paragraphs.paragraphs_type.our_story
   module:
     - link
-id: paragraph.about.field_cta
+id: paragraph.our_story.field_cta
 field_name: field_cta
 entity_type: paragraph
-bundle: about
+bundle: our_story
 label: CTA
 description: ''
 required: false

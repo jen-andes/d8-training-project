@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.homepage
-    - paragraphs.paragraphs_type.about
     - paragraphs.paragraphs_type.featured_blog
     - paragraphs.paragraphs_type.instagram
     - paragraphs.paragraphs_type.menu
+    - paragraphs.paragraphs_type.our_story
     - paragraphs.paragraphs_type.promotion
     - paragraphs.paragraphs_type.team
     - paragraphs.paragraphs_type.upcoming_event
@@ -28,17 +28,17 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      about: about
       promotion: promotion
       menu: menu
       featured_blog: featured_blog
       instagram: instagram
       upcoming_event: upcoming_event
       team: team
+      our_story: our_story
     target_bundles_drag_drop:
       about:
-        enabled: true
         weight: 5
+        enabled: false
       slide:
         weight: 6
         enabled: false
@@ -48,12 +48,12 @@ settings:
       promotion:
         enabled: true
         weight: 7
-      social_link:
-        weight: 8
-        enabled: false
       menu:
         enabled: true
         weight: 8
+      social_link:
+        weight: 8
+        enabled: false
       featured_blog:
         enabled: true
         weight: 11
@@ -66,4 +66,7 @@ settings:
       team:
         enabled: true
         weight: 15
+      our_story:
+        enabled: true
+        weight: 16
 field_type: entity_reference_revisions

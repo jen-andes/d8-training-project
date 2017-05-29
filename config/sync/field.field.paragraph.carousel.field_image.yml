@@ -1,20 +1,20 @@
-uuid: 170a6f49-b1f4-4998-b1bf-362a87830dfe
+uuid: 7ef5754e-adfa-46a8-af3f-2c42def39519
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_images
-    - paragraphs.paragraphs_type.about
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.carousel
   module:
     - image
-id: paragraph.about.field_images
-field_name: field_images
+id: paragraph.carousel.field_image
+field_name: field_image
 entity_type: paragraph
-bundle: about
-label: Images
+bundle: carousel
+label: 'Background Image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

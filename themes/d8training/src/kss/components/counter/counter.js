@@ -5,9 +5,9 @@
     attach: function (context) {
 
       /*----------------------------
-          COUNTER UP ACTIVE
+        COUNTER UP ACTIVE
       ------------------------------*/
-       $('.counter', context).counterUp({
+      $('.counter', context).counterUp({
         delay: 10,
         time: 3000
       });

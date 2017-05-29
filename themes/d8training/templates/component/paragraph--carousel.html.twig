@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Carousel' component.
+ */
+#}
+
+{% set items = [] %}
+{% for citem in content.field_carousel_item['#items'] %}
+  {% set citem = content.field_carousel_item[loop.index0] %}
+  {% set citem_entity = pre_render(citem) %}
+    {%
+      set item = {
+        'type': 'full',
+        'icon': 'quote',
+        'title': citem_entity.field_title.0['#context'].value,
+        'caption': citem_entity.field_kicker.0['#context'].value,
+        'text': citem_entity.field_plain_text.0['#context'].value,
+      }
+    %}
+  {% set items = items|merge([item]) %}
+{% endfor %}
+
+{{ attach_library('d8training/carousel') }}
+{% include '@d8training/carousel/carousel.twig' with {
+    'bg': image_attr(content.field_image),
+    'items': items
+  } only
+%}

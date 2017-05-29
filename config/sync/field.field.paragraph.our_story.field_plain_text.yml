@@ -1,18 +1,18 @@
-uuid: a6791754-9214-495a-9cca-50c52e89d783
+uuid: 6a18a7af-1fab-45fe-b3d1-53a206c76128
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_plain_text
-    - paragraphs.paragraphs_type.about
-id: paragraph.about.field_plain_text
+    - paragraphs.paragraphs_type.our_story
+id: paragraph.our_story.field_plain_text
 field_name: field_plain_text
 entity_type: paragraph
-bundle: about
+bundle: our_story
 label: Description
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
