@@ -1,0 +1,33 @@
+uuid: 8832a5f9-23e1-4dcc-a47b-70957a9b4036
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero
+    - field.field.node.homepage.field_components
+    - field.field.node.homepage.field_slideshow
+    - node.type.homepage
+  module:
+    - entity_reference_revisions
+    - user
+id: node.homepage.hero
+targetEntityType: node
+bundle: homepage
+mode: hero
+content:
+  field_slideshow:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_components: true

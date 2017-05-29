@@ -1,0 +1,59 @@
+uuid: 07140906-68e7-42f8-9b8d-c4b808f3c902
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.landing
+    - paragraphs.paragraphs_type.about
+    - paragraphs.paragraphs_type.team
+  module:
+    - entity_reference_revisions
+id: node.landing.field_components
+field_name: field_components
+entity_type: node
+bundle: landing
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      about: about
+      team: team
+    target_bundles_drag_drop:
+      about:
+        enabled: true
+        weight: 11
+      featured_blog:
+        weight: 12
+        enabled: false
+      instagram:
+        weight: 13
+        enabled: false
+      menu:
+        weight: 14
+        enabled: false
+      promotion:
+        weight: 15
+        enabled: false
+      slide:
+        weight: 16
+        enabled: false
+      slideshow:
+        weight: 17
+        enabled: false
+      social_link:
+        weight: 18
+        enabled: false
+      team:
+        enabled: true
+        weight: 19
+      upcoming_event:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

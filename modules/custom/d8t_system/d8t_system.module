@@ -20,10 +20,21 @@ function d8t_system_block_view_alter(array &$build, BlockPluginInterface $block)
  */
 function _d8t_system_custom_block_pre_render(array $build) {
   $id = $build['#id'];
+
+  // menus
   $menu_map = ['header' => 'main', 'footer' => 'footer'];
   $menu_id  = $menu_map[$id];
   $simpleMenu = new SimpleMenu();
   $menus = $simpleMenu->getMenu($menu_id);
+
+  // hero
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node){
+    $node_view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+    $build['content']['hero'] = $node_view_builder->view($node, 'hero');
+    $build['content']['pagetype'] = ($node->getType() == 'homepage') ? 'default' : 'single';
+  }
+
   $build['content']['menus'] = $menus['items'];
   return $build;
 }

@@ -1,0 +1,109 @@
+{
+  "topbar": {
+    "email": "info@d8training.com",
+    "phone": "+1 800 234 5678",
+    "cta": {
+      "url": "/reservation",
+      "text": "Book a table"
+    },
+    "social_links": [
+      {
+        "icon": "facebook",
+        "url": "http://example.com"
+      },
+      {
+        "icon": "twitter",
+        "url": "http://example.com"
+      },
+      {
+        "icon": "dribbble",
+        "url": "http://example.com"
+      },
+      {
+        "icon": "behance",
+        "url": "http://example.com"
+      }
+    ]
+  },
+  "menus": {
+    "items": [
+      {
+        "name": "Home",
+        "url": "#",
+        "is_active": true,
+        "submenus": [
+          {
+            "name": "Home Deafult 1",
+            "url": "#"
+          },
+          {
+            "name": "Home Version 2",
+            "url": "#"
+          },
+          {
+            "name": "Home Version 3",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "About Us",
+        "url": "#",
+        "is_active": false,
+        "submenus": []
+      },
+      {
+        "name": "Pages",
+        "url": "#",
+        "is_active": false,
+        "submenus": [
+          {
+            "name": "About Style 2",
+            "url": "#"
+          },
+          {
+            "name": "Menu Style 2",
+            "url": "#"
+          },
+          {
+            "name": "Reservation 2",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "name": "Reservation",
+        "url": "#",
+        "is_active": false,
+        "submenus": []
+      },
+      {
+        "name": "Events",
+        "url": "#",
+        "is_active": false,
+        "submenus": []
+      },
+      {
+        "name": "Contact",
+        "url": "#",
+        "is_active": false,
+        "submenus": []
+      }
+    ],
+    "homepage_url": "#",
+    "logo_primary": "../../src/kss/components/header-home/images/main_logo.png",
+    "logo_secondary": "../../src/kss/components/header-home/images/main_logo_black.png",
+    "homepage_url": "#",
+    "search_form": {
+      "name": "Search",
+      "placeholder": "Search..."
+    }
+  },
+  "banner": {
+    "title": "About Us",
+    "image": {
+      "src": "../../src/kss/components/banner/images/about_page_banner.jpg",
+      "alt": ""
+    }
+  }
+}

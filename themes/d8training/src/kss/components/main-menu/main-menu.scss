@@ -1,0 +1,187 @@
+// Main Menu
+//
+// Use to display a Main Menu component.
+//
+// Markup: main-menu.twig
+//
+// Styleguide Components.Main-Menu
+
+/*---------------------------------
+    2.1 MAINMENU AREA
+-----------------------------------*/
+
+.mainmenu-area {
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    z-index: 9999;
+}
+
+.is-sticky .mainmenu-area {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    z-index: 99999;
+}
+
+.navbar-header {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+.navbar-brand.white {
+    display: block;
+}
+
+.is-sticky .navbar-brand.white {
+    display: none;
+}
+
+.is-sticky .navbar-brand {
+    display: block;
+}
+
+.navbar {
+    border-bottom: 0 none;
+    border-top: 0 none;
+    margin-bottom: 0;
+}
+
+ul#nav {
+    float: right;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+ul#nav li a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 40px 20px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+ul#nav li.active a::before {
+    background: #d0963e none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+ul#nav li:hover a,
+ul#nav li.active a {
+    color: #d0963e;
+}
+
+ul#nav li:hover ul {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+ul#nav ul {
+    background: #1a1a1a none repeat scroll 0 0;
+    left: 0;
+    list-style: outside none none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: left top 0;
+    transform-origin: left top 0;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    width: 180px;
+}
+
+ul#nav li ul li {
+    display: block;
+    border-bottom: 1px dashed #363636;
+}
+
+ul#nav li ul li:last-child {
+    border-bottom: 0 none;
+}
+
+.is-sticky ul#nav li ul li:hover a,
+ul#nav li ul li a,
+ul#nav ul li a {
+    color: #fff !important;
+    display: block;
+    padding: 7px 15px;
+}
+
+ul#nav ul li:hover a {
+    background: #d0963e none repeat scroll 0 0;
+    color: #fff;
+}
+
+.is-sticky ul#nav li ul li a {
+    padding: 7px 15px;
+}
+
+.top-bar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.call-to-action {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.call-to-action a {
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.call-to-action p {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+.call-to-action i {
+    margin-right: 10px;
+}
+
+.is-sticky ul#nav li a {
+    padding: 30px 20px;
+    color: #1a1a1a;
+}
+
+.is-sticky ul#nav li.active a,
+.is-sticky ul#nav li:hover a {
+    color: #d0963e;
+}
+
+.is-sticky .signup-and-login-button ul li {
+    padding: 14px 0;
+}
+
+.is-sticky .signup-and-login-button ul li a {
+    background: #d64332 none repeat scroll 0 0;
+    color: #fff;
+}
+
+.is-sticky .mainmenu-area {
+    background: #ffffff none repeat scroll 0 0;
+}
+
+.is-sticky .navbar-header {
+    margin-top: -3px;
+}

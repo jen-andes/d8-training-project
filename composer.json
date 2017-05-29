@@ -11,7 +11,8 @@
         "drupal/components": "^1.0",
         "drupal/page_manager": "^4.0@beta",
         "drupal/panels": "^4.1",
-        "drupal/field_group": "^1.0@RC"
+        "drupal/field_group": "^1.0@RC",
+        "drupal/pathauto": "^1.0"
     },
     "replace": {
         "drupal/core": "~8.3"

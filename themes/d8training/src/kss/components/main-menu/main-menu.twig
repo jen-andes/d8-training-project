@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Main Menu
+ *
+ * Available variables:
+ * - logo_primary: The primary logo source path
+ * - logo_secondary: The secondary logo source path.
+ * - homepage_url: The front page url
+ * - items[]: An array of menu links.
+ *   - text: The link text.
+ *   - url: The link url.
+ *   - submenus[]: An array of submenu links.
+ *     - text: The link text.
+ *     - url: The link url.
+ * - seach_form: The search form.
+ *   - name: The name of search input.
+ *   - placeholder: The search input placeholder.
+ */
+#}
+<div class="mainmenu-area" id="mainmenu-area">
+  <div class="mainmenu-area-bg"></div>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="{{ homepage_url }}" class="navbar-brand"><img src="{{ logo_secondary|default() }}" alt="logo"></a>
+        <a href="{{ homepage_url }}" class="navbar-brand white"><img src="{{ logo_primary|default() }}" alt="logo"></a>
+      </div>
+      <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+        
+        {% if search_form|default() -%}
+          {% include '@d8training/search-form/search-form.twig' with search_form only %}
+        {%- endif %}
+
+        {% if items is not empty -%}
+          <ul id="nav" class="nav navbar-nav cl-effect-11">
+            {% for menu in items %}
+            <li {{ menu.is_active ? 'class="active"' : '' }} >
+              <a class="at-drop-down" href="{{ menu.url }}">{{ menu.text }}
+              {% if menu.submenus is not empty -%}
+                <i class="hidden-md hidden-lg fa fa-angle-down"></i>
+              {%- endif %}
+              </a>
+
+              {% if menu.submenus is not empty -%}
+                <ul class="sub-menu">
+                {% for submenu in menu.submenus %}
+                  <li><a href="{{ submenu.url }}">{{ submenu.text }}</a></li>
+                {% endfor %}
+                </ul>
+              {%- endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        {%- endif %}
+      </div>
+    </div>
+  </nav>
+</div>
