@@ -1,0 +1,22 @@
+uuid: 317fed2b-cfde-4700-b525-0efa90466974
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing.field_components
+    - field.field.node.landing.field_image
+    - node.type.landing
+  module:
+    - user
+id: node.landing.teaser
+targetEntityType: node
+bundle: landing
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_components: true
+  field_image: true

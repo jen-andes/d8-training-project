@@ -1,0 +1,73 @@
+{
+  "homepage_url": "#",
+  "logo_primary": "../../src/kss/components/main-menu/images/main_logo.png",
+  "logo_secondary": "../../src/kss/components/main-menu/images/main_logo_black.png",
+  "items": [
+    {
+      "text": "Home",
+      "url": "#",
+      "is_active": true,
+      "submenus": [
+        {
+          "text": "Home Deafult 1",
+          "url": "#"
+        },
+        {
+          "text": "Home Version 2",
+          "url": "#"
+        },
+        {
+          "text": "Home Version 3",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "text": "About Us",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    },
+    {
+      "text": "Pages",
+      "url": "#",
+      "is_active": false,
+      "submenus": [
+        {
+          "text": "About Style 2",
+          "url": "#"
+        },
+        {
+          "text": "Menu Style 2",
+          "url": "#"
+        },
+        {
+          "text": "Reservation 2",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "text": "Reservation",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    },
+    {
+      "text": "Events",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    },
+    {
+      "text": "Contact",
+      "url": "#",
+      "is_active": false,
+      "submenus": []
+    }
+  ],
+  "search_form": {
+    "name": "Search",
+    "placeholder": "Search..."
+  }
+}

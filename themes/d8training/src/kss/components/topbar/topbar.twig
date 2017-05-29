@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Topbar
+ *
+ * Available variables:
+ * - email: The email address.
+ * - phone: The phone number.
+ * - cta: The reservation link.
+ *   - text: The button text.
+ *   - url: The link url.
+ * - social_links[]: An array of social links.
+ *   - icon: The link icon.
+ *   - url: The link url.
+ */
+#}
+<div class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-6 col-sm-8">
+        <div class="call-to-action">
+          {% if email %}<p><i class="fa fa-envelope-o"></i>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>{% endif %}
+          {% if phone %}<p><i class="fa fa-phone"></i>Telephone: <a href="callto:{{ phone }}">{{ phone }}</a></p>{% endif %}
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-6 col-sm-4">
+        {% if cta is not empty -%}
+          <div class="book-table-popup">
+            <a href="{{ cta.url }}">{{ cta.text }}</a>
+          </div>
+        {%- endif %}    
+
+        <div class="top-social-bookmark">
+          {% if social_links is not empty -%}
+            <ul>
+              {% for social in social_links %}
+                <li><a href="{{ social.url }}"><i class="fa fa-{{ social.icon }}"></i></a></li>
+              {% endfor %}
+            </ul>
+          {%- endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,26 +14,26 @@
       /* -------------------------
         SCROLLSPY ACTIVE
       -------------------------- */
-      /*$('body').scrollspy({
+      $('body').scrollspy({
         target: '.bs-example-js-navbar-scrollspy',
         offset: 50
-      });*/
+      });
 
       /*--------------------------------
           DROPDOWN MOBILE MENU
       ----------------------------------*/
       function doneResizing() {
-          if (Modernizr.mq('screen and (max-width:991px)')) {
-              $('.at-drop-down').on('click', function (e) {
-                  e.preventDefault();
-                  $(this).next($('.sub-menu')).slideToggle();
-              });
-          }
+        if (Modernizr.mq('screen and (max-width:991px)')) {
+          $('.at-drop-down').on('click', function (e) {
+            e.preventDefault();
+            $(this).next($('.sub-menu')).slideToggle();
+          });
+        }
       }
       var id;
       $(window).resize(function () {
-          clearTimeout(id);
-          id = setTimeout(doneResizing, 0);
+        clearTimeout(id);
+        id = setTimeout(doneResizing, 0);
       });
       doneResizing();
 

@@ -1,0 +1,33 @@
+uuid: 0c7ee7a9-b08a-44d1-aa04-a23b586a2865
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero
+    - field.field.node.landing.field_components
+    - field.field.node.landing.field_image
+    - node.type.landing
+  module:
+    - image
+    - user
+id: node.landing.hero
+targetEntityType: node
+bundle: landing
+mode: hero
+content:
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_components: true

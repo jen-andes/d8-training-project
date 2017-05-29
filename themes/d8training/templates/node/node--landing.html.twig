@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Theme override to display node of 'About' type.
+ */
+#}
+
+{{ attach_library('d8training/banner') }}
+{% include '@d8training/banner/banner.twig' with {
+    'title': node.getTitle(),
+    'image': image_attr(content.field_image),
+  } only
+%}
+
+{{ content.field_components }}
