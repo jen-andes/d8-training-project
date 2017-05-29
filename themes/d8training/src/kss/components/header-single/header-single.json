@@ -104,6 +104,18 @@
     "image": {
       "src": "../../src/kss/components/banner/images/about_page_banner.jpg",
       "alt": ""
-    }
+    },
+    "breadcrumbs": [
+      {
+        "text": "Homepage",
+        "url": "/",
+        "active": false
+      },
+      {
+        "text": "About Us",
+        "url": "/",
+        "active": true
+      }
+    ]
   }
 }

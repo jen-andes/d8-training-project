@@ -40,10 +40,23 @@
     {% set slides = slides|merge([slide]) %}
   {% endfor %}
 {% else %}
+  {% set currentPath = path('entity.node.canonical', {'node': hero['#node'].id() }) %}
   {%
     set banner = {
-      'title': node.getTitle(),
-      'image': image_attr(hero.field_image)
+      'title': hero['#node'].getTitle(),
+      'image': image_attr(hero.field_image),
+      'breadcrumbs': [
+        {
+          'text': 'Homepage',
+          'url': '/',
+          'active': false
+        },
+        {
+          'text': hero['#node'].getTitle(),
+          'url': currentPath,
+          'active': true
+        }
+      ]
     }
   %}
 {% endif %}
