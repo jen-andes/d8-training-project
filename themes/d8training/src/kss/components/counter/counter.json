@@ -1,25 +1,28 @@
 {
-  "background_image": "../../src/kss/components/counter/images/about_counter_bgr.jpg",
+  "bg": {
+    "src": "../../src/kss/components/counter/images/about_counter_bgr.jpg",
+    "alt": ""
+  },
   "counters" : [
     {
-      "icon": "fa fa-heart-o",
-      "value": "25.000",
-      "name": "Daily Meal"
+      "icon": "heart-o",
+      "value": "25,000",
+      "caption": "Daily Meal"
     },
     {
-      "icon": "fa fa-heart-o",
-      "value": "56.000",
-      "name": "Happy Clients"
+      "icon": "smile-o",
+      "value": "56,000",
+      "caption": "Happy Clients"
     },
     {
-      "icon": "fa fa-cutlery",
-      "value": "66.000",
-      "name": "Parcel Today"
+      "icon": "cutlery",
+      "value": "66,000",
+      "caption": "Parcel Today"
     },
     {
-      "icon": "fa fa-map-o",
-      "value": "78.000",
-      "name": "Online Stores"
+      "icon": "map-o",
+      "value": "78,000",
+      "caption": "Online Stores"
     }
   ]
 }

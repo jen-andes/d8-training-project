@@ -16,11 +16,6 @@ global:
     - core/drupal
     - core/jquery
 
-about:
-  css:
-    theme:
-      dist/css/about.css: {}
-
 blog-featured:
   css:
     theme:
@@ -30,6 +25,14 @@ banner:
   css:
     theme:
       dist/css/banner.css: {}
+
+counter:
+  css:
+    theme:
+      dist/css/counter.css: {}
+  js:
+    dist/js/counter.js: {}
+    vendor-dist/js/jquery.counterup.min.js: {}
 
 event-list:
   css:
@@ -77,6 +80,15 @@ main-menu:
   dependencies:
     - d8training/search-form
 
+our-story:
+  css:
+    theme:
+      dist/css/our-story.css: {}
+      vendor-dist/css/magnific-popup.css: {}
+  js:
+    dist/js/our-story.js: {}
+    vendor-dist/js/jquery.magnific-popup.min.js: {}
+
 promotions:
   css:
     theme:
@@ -113,4 +125,13 @@ team:
       vendor-dist/css/owl.carousel.css: {}
   js:
     dist/js/team.js: {}
+    vendor-dist/js/owl.carousel.min.js: {}
+
+carousel:
+  css:
+    theme:
+      dist/css/carousel.css: {}
+      vendor-dist/css/owl.carousel.css: {}
+  js:
+    dist/js/carousel.js: {}
     vendor-dist/js/owl.carousel.min.js: {}

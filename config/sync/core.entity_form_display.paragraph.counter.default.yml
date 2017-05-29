@@ -1,0 +1,41 @@
+uuid: 35f30f77-1c29-4e71-891a-fcc53b9e293f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.counter.field_counter_item
+    - field.field.paragraph.counter.field_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.counter
+  module:
+    - image
+    - paragraphs
+id: paragraph.counter.default
+targetEntityType: paragraph
+bundle: counter
+mode: default
+content:
+  field_counter_item:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

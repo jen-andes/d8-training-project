@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Carousel
+ *
+ * Available variables:
+ * - type: The carousel type {full}
+ * - bg: The background image
+ *   - src: Source path of the image
+ *   - alt: Alternate text of the image
+ * - items[]: An array of carousel item.
+ *   - icon: The display icon {quote}
+ *   - text: The text.
+ *   - title: The title or name.
+ *   - caption: The short info or caption.
+ */
+#}
+<section class="carousel-area section-padding">
+  <div class="carousel-area-bg" style="background-image: url({{ bg.src }})"></div>
+
+  <div class="container-fluid wow fadeIn">
+    <div class="row carousel-slider">
+      
+      {% for item in items %}     
+      <div class="col-md-offset-2 col-lg-offset-2 col-lg-8  col-md-8 col-sm-12 col-xs-12">
+        <div class="single-testmonail text-center">
+          {% if item.icon == 'quote' -%}
+            <div class="quate-icon"><i class="fa fa-quote-right"></i></div>
+          {%- endif %}
+          <p>{{ item.text }}</p>
+          <div class="carousel-member-name-title">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.caption }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

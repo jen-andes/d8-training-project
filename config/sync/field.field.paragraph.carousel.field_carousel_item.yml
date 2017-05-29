@@ -1,44 +1,38 @@
-uuid: 7c1db7b2-33d8-42cf-80ef-618877fc3e37
+uuid: e4a9e548-4941-489b-a0ba-b5394d2511f5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_components
-    - node.type.landing
+    - field.storage.paragraph.field_carousel_item
     - paragraphs.paragraphs_type.carousel
-    - paragraphs.paragraphs_type.counter
-    - paragraphs.paragraphs_type.our_story
-    - paragraphs.paragraphs_type.team
+    - paragraphs.paragraphs_type.carousel_item
   module:
     - entity_reference_revisions
-id: node.landing.field_components
-field_name: field_components
-entity_type: node
-bundle: landing
-label: Components
+id: paragraph.carousel.field_carousel_item
+field_name: field_carousel_item
+entity_type: paragraph
+bundle: carousel
+label: 'Carousel Item'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      carousel: carousel
-      counter: counter
-      our_story: our_story
-      team: team
+      carousel_item: carousel_item
     target_bundles_drag_drop:
       carousel:
-        enabled: true
         weight: 15
-      carousel_item:
-        weight: 16
         enabled: false
-      counter:
+      carousel_item:
         enabled: true
+        weight: 16
+      counter:
         weight: 17
+        enabled: false
       counter_item:
         weight: 18
         enabled: false
@@ -52,8 +46,8 @@ settings:
         weight: 21
         enabled: false
       our_story:
-        enabled: true
         weight: 22
+        enabled: false
       promotion:
         weight: 23
         enabled: false
@@ -67,8 +61,8 @@ settings:
         weight: 26
         enabled: false
       team:
-        enabled: true
         weight: 27
+        enabled: false
       upcoming_event:
         weight: 28
         enabled: false

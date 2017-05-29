@@ -1,0 +1,7 @@
+uuid: 4f97b5f4-92c1-4df0-ad99-594f72fecdaa
+langcode: en
+status: true
+dependencies: {  }
+id: counter_item
+label: 'Counter Item'
+behavior_plugins: {  }

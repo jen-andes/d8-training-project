@@ -1,0 +1,95 @@
+// Carousel
+//
+// Use to display the Carousel component.
+//
+// Markup: carousel.twig
+//
+// Styleguide Components.Carousel
+
+/*------------------------------
+  14.2 TESTOMONIAL AREA
+-------------------------------*/
+
+.carousel-area {
+  font-size: 24px;
+  position: relative;
+}
+
+.carousel-area-bg {
+  background: rgba(0, 0, 0, 0) no-repeat scroll center center / cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel-area-bg::after {
+  background: #fff none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.quate-icon {
+  border: 2px solid;
+  border-radius: 50%;
+  color: #c1934c;
+  height: 50px;
+  margin: auto auto 40px;
+  padding-top: 12px;
+  width: 50px;
+}
+
+.carousel-member-name-title > h4 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.carousel-member-name-title {
+  color: #1b1b1b;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.carousel-member-name-title > p {
+  margin-bottom: 0;
+}
+
+.row.carousel-slider {
+  margin: auto;
+}
+
+.carousel-area .owl-nav > div {
+  display: inline-block;
+  font-size: 50px;
+  height: 50px;
+  margin-top: -25px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 50px;
+  color: #b8b8b8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.carousel-area .owl-nav > div:hover {
+  -webkit-transform: scaleY(1.5);
+  transform: scaleY(1.5);
+  color: #c1934c;
+}
+
+.carousel-area .owl-nav > div.owl-next {
+  right: 0;
+}
+
+.carousel-area .owl-nav > div.owl-prev {
+  left: 0;
+}

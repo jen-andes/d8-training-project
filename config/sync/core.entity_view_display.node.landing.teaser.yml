@@ -4,7 +4,6 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.landing.field_components
     - field.field.node.landing.field_image
     - node.type.landing
   module:
@@ -18,5 +17,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_components: true
   field_image: true

@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Counter' component.
+ */
+#}
+
+{% set counters = [] %}
+{% for citem in content.field_counter_item['#items'] %}
+  {% set citem = content.field_counter_item[loop.index0] %}
+  {% set citem_entity = pre_render(citem) %}
+    {%
+      set counter = {
+        'icon': citem_entity.field_icon.0['#markup'],
+        'value': citem_entity.field_kicker.0['#context'].value,
+        'caption': citem_entity.field_title.0['#context'].value
+      }
+    %}
+  {% set counters = counters|merge([counter]) %}
+{% endfor %}
+
+{{ attach_library('d8training/counter') }}
+{% include '@d8training/counter/counter.twig' with {
+    'bg': image_attr(content.field_image),
+    'counters': counters
+  } only
+%}

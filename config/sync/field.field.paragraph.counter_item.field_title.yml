@@ -1,17 +1,17 @@
-uuid: 6a1d8fc7-1541-4f78-a1bd-adfc822dc084
+uuid: 2bce0226-f101-44f5-aa72-a13b63bec992
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.about
-id: paragraph.about.field_title
+    - paragraphs.paragraphs_type.counter_item
+id: paragraph.counter_item.field_title
 field_name: field_title
 entity_type: paragraph
-bundle: about
-label: Title
+bundle: counter_item
+label: Caption
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

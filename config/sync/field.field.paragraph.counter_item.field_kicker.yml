@@ -1,18 +1,18 @@
-uuid: 260f6a31-27b0-4b59-8149-c5ba26d737d9
+uuid: bb566b30-6f8d-4fd7-b81b-787651529557
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_kicker
-    - paragraphs.paragraphs_type.about
-id: paragraph.about.field_kicker
+    - paragraphs.paragraphs_type.counter_item
+id: paragraph.counter_item.field_kicker
 field_name: field_kicker
 entity_type: paragraph
-bundle: about
-label: Kicker
+bundle: counter_item
+label: 'Counter Value'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

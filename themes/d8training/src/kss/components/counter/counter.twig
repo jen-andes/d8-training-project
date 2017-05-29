@@ -1,16 +1,36 @@
+{#
+/**
+ * @file
+ * Counter
+ *
+ * Available variables:
+ * - bg: The background image
+ *   - src: Source path of the image
+ *   - alt: Alternate text of the image
+ * - counters[]: An array of counter
+ *   - icon: The counter icon.
+ *   - value: The counter value.
+ *   - caption: The caption.
+ */
+#}
 <div class="counter-area section-padding">
-    <div class="count-area-bg" style="background-image: url({{ background_image }})"></div>
-    <div class="container wow fadeIn">
-        <div class="row">
-            {% for counter in counters %}
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single-counter text-center">
-                    <div class="counter-icon"><i class="{{ counter.icon }}"></i></div>
-                    <h3 class="counter">{{ counter.value }}</h3>
-                    <p>{{ counter.name }}</p>
-                </div>
+
+  {% if bg|default() -%}
+    <div class="count-area-bg" style="background-image: url({{ bg.src }})"></div>
+  {%- endif %}
+
+  <div class="container wow fadeIn">
+    <div class="row">
+        {% for counter in counters %}
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <div class="single-counter text-center">
+                <div class="counter-icon"><i class="fa fa-{{ counter.icon }}"></i></div>
+                <h3 class="counter">{{ counter.value }}</h3>
+                <p>{{ counter.caption }}</p>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
+  </div>
+
 </div>

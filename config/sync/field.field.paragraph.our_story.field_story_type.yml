@@ -1,0 +1,23 @@
+uuid: 1cae5705-3ad9-4072-a0c9-50a9e67197c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_story_type
+    - paragraphs.paragraphs_type.our_story
+  module:
+    - options
+id: paragraph.our_story.field_story_type
+field_name: field_story_type
+entity_type: paragraph
+bundle: our_story
+label: 'Story Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image
+default_value_callback: ''
+settings: {  }
+field_type: list_string

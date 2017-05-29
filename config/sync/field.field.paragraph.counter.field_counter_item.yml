@@ -1,0 +1,63 @@
+uuid: 231cd4ef-47f9-49df-a0d0-6686985fc5a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_counter_item
+    - paragraphs.paragraphs_type.counter
+    - paragraphs.paragraphs_type.counter_item
+  module:
+    - entity_reference_revisions
+id: paragraph.counter.field_counter_item
+field_name: field_counter_item
+entity_type: paragraph
+bundle: counter
+label: Item
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      counter_item: counter_item
+    target_bundles_drag_drop:
+      counter:
+        weight: 13
+        enabled: false
+      counter_item:
+        enabled: true
+        weight: 14
+      featured_blog:
+        weight: 15
+        enabled: false
+      instagram:
+        weight: 16
+        enabled: false
+      menu:
+        weight: 17
+        enabled: false
+      our_story:
+        weight: 18
+        enabled: false
+      promotion:
+        weight: 19
+        enabled: false
+      slide:
+        weight: 20
+        enabled: false
+      slideshow:
+        weight: 21
+        enabled: false
+      social_link:
+        weight: 22
+        enabled: false
+      team:
+        weight: 23
+        enabled: false
+      upcoming_event:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

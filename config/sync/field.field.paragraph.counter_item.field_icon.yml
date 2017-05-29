@@ -1,0 +1,21 @@
+uuid: 7881ddb2-fd80-4ba9-b4cb-ea01dcf30896
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.counter_item
+  module:
+    - options
+id: paragraph.counter_item.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: counter_item
+label: Icon
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

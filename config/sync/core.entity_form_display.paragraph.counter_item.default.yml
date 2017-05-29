@@ -1,0 +1,40 @@
+uuid: 3e1200e0-864f-491c-b302-2349088c2fcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.counter_item.field_icon
+    - field.field.paragraph.counter_item.field_kicker
+    - field.field.paragraph.counter_item.field_title
+    - paragraphs.paragraphs_type.counter_item
+id: paragraph.counter_item.default
+targetEntityType: paragraph
+bundle: counter_item
+mode: default
+content:
+  field_icon:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_kicker:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
