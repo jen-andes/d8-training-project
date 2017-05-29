@@ -5,6 +5,10 @@
  *
  * Available variables:
  * - title: The title.
+ * - breadcrumbs[]: An array of breadcrumb.
+ *   - url: The item url.
+ *   - text: The item text.
+ *   - active: The status of the link {true/false}
  */
 #}
 <div class="page-barner-area">
@@ -13,11 +17,18 @@
       <div class="col-md-12 col-xs-12">
         <div class="barner-text">
           <h1>{{ title }}</h1>
+
+          {% if breadcrumbs is not empty %}
           <ul class="page-location">
-            <li><a href="index.html">Home</a></li>
-            <li><i class="fa fa-angle-right"></i></li>
-            <li class="active"><a href="about-us.html">About Us</a></li>
+            {% for breadcrumb in breadcrumbs %}
+              {% if 0 < loop.index0 -%}
+                <li><i class="fa fa-angle-right"></i></li>
+              {%- endif %}
+              <li class="{{ breadcrumb.active ? 'active' }}"><a href="{{ breadcrumb.url }}">{{ breadcrumb.text }}</a></li>
+            {% endfor %}
           </ul>
+          {% endif %}
+
         </div>
       </div>
     </div>
