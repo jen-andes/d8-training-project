@@ -1,0 +1,7 @@
+uuid: 558e37ce-7ac5-443c-915b-521a2cc58da7
+langcode: en
+status: true
+dependencies: {  }
+id: breaker
+label: Breaker
+behavior_plugins: {  }

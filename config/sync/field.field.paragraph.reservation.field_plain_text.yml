@@ -1,0 +1,19 @@
+uuid: 50617bc1-26e1-46e1-8986-e6682ede1e67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_plain_text
+    - paragraphs.paragraphs_type.reservation
+id: paragraph.reservation.field_plain_text
+field_name: field_plain_text
+entity_type: paragraph
+bundle: reservation
+label: Note
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,20 @@
+uuid: 57a347c3-3cd7-4a38-b57f-d42292b04ab3
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.breaker.field_component
+    - node.type.breaker
+  module:
+    - user
+id: node.breaker.teaser
+targetEntityType: node
+bundle: breaker
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_component: true

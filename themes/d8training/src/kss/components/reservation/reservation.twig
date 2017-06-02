@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Reservation
+ *
+ * Available variables:
+ * - kicker: The highlighted title.
+ * - title: The title.
+ * - submit: The form submit info.
+ *   - text: The submit button text.
+ *   - url: The form action.
+ * - note: Short description or note.
+ * - infos[]: An array of additional information.
+ *   - title: The info title.
+ *   - text: The formatted info text.
+ */
+#}
+<section class="reservation-area section-padding">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <div class="area-title text-center">
+          <h2>{{ kicker }}</h2>
+          <h3>{{ title }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+        <form class="main-reservaton-form" action="{{ submit.url }}" method="post">
+          <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+              <label for="reservation_name"><i class="fa fa-user-o"></i></label>
+              <input type="text" name="reservation_name" id="reservation_name" placeholder="Your Name">
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+              <label for="reservation_email"><i class="fa fa-envelope-o"></i></label>
+              <input type="email" name="reservation_email" id="reservation_email" placeholder="Your Email">
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+              <label for="reservation_date"><i class="fa fa-calendar"></i></label>
+              <input type="text" name="reservation_date" id="reservation_date" placeholder="Expected Date" data-select="datepicker">
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+              <label for="reservation_time"><i class="fa fa-clock-o"></i></label>
+              <input type="text" name="reservation_time" id="reservation_time" placeholder="Expected Time">
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+              <label for="reservation_person"><i class="fa fa-user-plus"></i></label>
+              <input type="text" name="reservation_person" id="reservation_person" placeholder="Total Person">
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+              <label for="reservation_phone"><i class="fa fa-phone"></i></label>
+              <input type="text" name="reservation_phone" id="reservation_phone" placeholder="Phone No">
+            </div>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+              <label for="reservation_message"><i class="fa fa-comment-o"></i></label>
+              <textarea name="reservation_message" id="reservation_message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center">
+              <button type="submit">{{ submit.text }}</button>
+              <p>{{ note }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% if infos is not empty %}
+    <div class="row">
+      {% for info in infos %}
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="reservation-call-to-action">
+          <h4>{{ info.title }}</h4>
+          {{ info.text|raw }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</section>

@@ -1,0 +1,22 @@
+uuid: f0b5b266-9f9b-42c7-8d7b-06ff72b8b01d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.breaker
+id: node.breaker.promote
+field_name: promote
+entity_type: node
+bundle: breaker
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: f125b7d0-480d-49e7-b87b-46d754ec8b8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: title_only
+label: 'Title only'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  84d8c4fb-ab94-49c7-a2ca-13003e3c2f27:
+    id: node_type
+    bundles:
+      homepage: homepage
+      landing: landing
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 84d8c4fb-ab94-49c7-a2ca-13003e3c2f27
+selection_logic: and
+weight: -5
+relationships: {  }
