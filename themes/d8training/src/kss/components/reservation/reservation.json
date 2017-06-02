@@ -1,0 +1,19 @@
+{
+  "kicker": "Reservation",
+  "title": "Reservation Form",
+  "submit": {
+    "text": "Book a Table",
+    "url": "#"
+  },
+  "note": "Please submit your reservation detail & We will contact you to confirm your booking",
+  "infos": [
+    {
+      "title": "Reserve by Phone",
+      "text": "<p>We take reservations for lunch and dinner. To make a reservation, please call us at <a href='#'>(080)-1234-678</a> between 09am-7pm, Monday to Friday.</p>"
+    },
+    {
+      "title": "Private Parties & Events",
+      "text": "<p>We are honored to serve you a special day, great in your life such as birthday parties, weddings, conferences or meeting friends. If the size of the party, the event over 15 wheels, please let us know soon.</p>"
+    }
+  ]
+}

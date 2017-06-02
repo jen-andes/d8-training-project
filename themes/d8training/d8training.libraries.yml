@@ -94,6 +94,11 @@ promotions:
     theme:
       dist/css/promotions.css: {}
 
+reservation:
+  css:
+    theme:
+      dist/css/reservation.css: {}
+
 slider:
   css:
     theme:

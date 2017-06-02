@@ -4,7 +4,9 @@
  * Promotions
  *
  * Available variables:
- * - bg: The background image url.
+ * - bg: The background image.
+ *   - src: Source path of the image
+ *   - alt: Alternate text of the image
  * - kicker: The highlighted title.
  * - title: The title.
  * - items[]: An array of promotions.
@@ -20,7 +22,7 @@
  */
 #}
 <section class="promotions-area section-padding">
-  <div class="promotion-area-bg" style="background: rgba(0, 0, 0, 0) url('{{ bg.src }}') no-repeat fixed 0 0 / cover"></div>
+  <div class="promotion-area-bg" style="background-image: url({{ bg.src }})"></div>
   <div class="container wow fadeIn">
     <div class="row">
       <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">

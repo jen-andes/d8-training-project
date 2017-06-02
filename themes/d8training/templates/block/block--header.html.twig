@@ -39,7 +39,9 @@
       %}
     {% set slides = slides|merge([slide]) %}
   {% endfor %}
-{% else %}
+{% endif %}
+
+{% if hero.field_image %}
   {% set currentPath = path('entity.node.canonical', {'node': hero['#node'].id() }) %}
   {%
     set banner = {

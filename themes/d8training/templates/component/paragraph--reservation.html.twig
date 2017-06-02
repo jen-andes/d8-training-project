@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display an 'Reservation' component.
+ */
+#}
+
+{% set infos = [] %}
+{% for citem in content.field_info['#items'] %}
+  {% set citem = content.field_info[loop.index0] %}
+  {% set citem_entity = pre_render(citem) %}
+    {%
+      set info = {
+        'title': citem_entity.field_title.0['#context'].value,
+        'text': citem_entity.field_long_text.0['#text']
+      }
+    %}
+  {% set infos = infos|merge([info]) %}
+{% endfor %}
+
+{{ attach_library('d8training/reservation') }}
+{% include '@d8training/reservation/reservation.twig' with {
+    'kicker': content.field_kicker.0['#context'].value,
+    'title': content.field_title.0['#context'].value,
+    'note': content.field_plain_text.0['#context'].value,
+    'infos': infos,
+    'submit': {
+      'text': 'Book a table',
+      'url': '#'
+    }
+  } only
+%}

@@ -1,0 +1,75 @@
+uuid: 451d97a1-0ceb-4009-94be-96c219c6c222
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info
+    - paragraphs.paragraphs_type.info
+    - paragraphs.paragraphs_type.reservation
+  module:
+    - entity_reference_revisions
+id: paragraph.reservation.field_info
+field_name: field_info
+entity_type: paragraph
+bundle: reservation
+label: Info
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      info: info
+    target_bundles_drag_drop:
+      carousel:
+        weight: 17
+        enabled: false
+      carousel_item:
+        weight: 18
+        enabled: false
+      counter:
+        weight: 19
+        enabled: false
+      counter_item:
+        weight: 20
+        enabled: false
+      featured_blog:
+        weight: 21
+        enabled: false
+      info:
+        enabled: true
+        weight: 22
+      instagram:
+        weight: 23
+        enabled: false
+      menu:
+        weight: 24
+        enabled: false
+      our_story:
+        weight: 25
+        enabled: false
+      promotion:
+        weight: 26
+        enabled: false
+      reservation:
+        weight: 27
+        enabled: false
+      slide:
+        weight: 28
+        enabled: false
+      slideshow:
+        weight: 29
+        enabled: false
+      social_link:
+        weight: 30
+        enabled: false
+      team:
+        weight: 31
+        enabled: false
+      upcoming_event:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

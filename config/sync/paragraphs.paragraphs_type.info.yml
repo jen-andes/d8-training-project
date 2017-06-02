@@ -1,0 +1,7 @@
+uuid: a7195b25-dec6-4c45-943e-1d0dbf880803
+langcode: en
+status: true
+dependencies: {  }
+id: info
+label: Info
+behavior_plugins: {  }

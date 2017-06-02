@@ -1,0 +1,82 @@
+uuid: 295d5495-078b-4846-9b38-ce7bd8877612
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_component
+    - node.type.breaker
+    - paragraphs.paragraphs_type.counter
+    - paragraphs.paragraphs_type.instagram
+    - paragraphs.paragraphs_type.team
+  module:
+    - entity_reference_revisions
+id: node.breaker.field_component
+field_name: field_component
+entity_type: node
+bundle: breaker
+label: Component
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      counter: counter
+      instagram: instagram
+      team: team
+    target_bundles_drag_drop:
+      breaker:
+        weight: 18
+        enabled: false
+      carousel:
+        weight: 19
+        enabled: false
+      carousel_item:
+        weight: 20
+        enabled: false
+      counter:
+        enabled: true
+        weight: 21
+      counter_item:
+        weight: 22
+        enabled: false
+      featured_blog:
+        weight: 23
+        enabled: false
+      info:
+        weight: 24
+        enabled: false
+      instagram:
+        enabled: true
+        weight: 25
+      menu:
+        weight: 26
+        enabled: false
+      our_story:
+        weight: 27
+        enabled: false
+      promotion:
+        weight: 28
+        enabled: false
+      reservation:
+        weight: 29
+        enabled: false
+      slide:
+        weight: 30
+        enabled: false
+      slideshow:
+        weight: 31
+        enabled: false
+      social_link:
+        weight: 32
+        enabled: false
+      team:
+        enabled: true
+        weight: 33
+      upcoming_event:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

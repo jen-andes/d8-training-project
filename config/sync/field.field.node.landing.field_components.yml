@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.landing
+    - paragraphs.paragraphs_type.breaker
     - paragraphs.paragraphs_type.carousel
     - paragraphs.paragraphs_type.counter
     - paragraphs.paragraphs_type.our_story
+    - paragraphs.paragraphs_type.reservation
     - paragraphs.paragraphs_type.team
   module:
     - entity_reference_revisions
@@ -27,7 +29,9 @@ settings:
     target_bundles:
       carousel: carousel
       counter: counter
+      breaker: breaker
       our_story: our_story
+      reservation: reservation
       team: team
     target_bundles_drag_drop:
       carousel:
@@ -39,6 +43,9 @@ settings:
       counter:
         enabled: true
         weight: 17
+      breaker:
+        enabled: true
+        weight: 18
       counter_item:
         weight: 18
         enabled: false
@@ -50,6 +57,9 @@ settings:
         enabled: false
       menu:
         weight: 21
+        enabled: false
+      info:
+        weight: 22
         enabled: false
       our_story:
         enabled: true
@@ -66,6 +76,9 @@ settings:
       social_link:
         weight: 26
         enabled: false
+      reservation:
+        enabled: true
+        weight: 27
       team:
         enabled: true
         weight: 27
