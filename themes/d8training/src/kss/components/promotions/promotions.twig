@@ -37,14 +37,20 @@
       <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
         <div class="single-promotions text-center">
           <div class="promotions-img">
-            <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
+            {% if item.image|default() -%}
+              <div class="food-menu-img">
+                {% include '@d8training/image/image.twig' with item.image only %}
+              </div>
+            {%- endif %}
             <div class="pakage-rate">
                 <p>{{ item.price_label }} <span>{{ item.price }}</span></p>
             </div>
           </div>
           <div class="promotions-details">
             <h4>{{ item.title }}</h4>
-            <a href="{{ item.cta.url }}" class="read-more">{{ item.cta.text }}</a>
+            {% if item.cta|default() -%}
+              <a href="{{ item.cta.url }}" class="read-more">{{ item.cta.text }}</a>
+            {%- endif %}
           </div>
         </div>
       </div>

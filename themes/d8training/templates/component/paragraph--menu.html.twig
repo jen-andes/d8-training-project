@@ -5,10 +5,36 @@
  */
 #}
 {{ attach_library('d8training/menu') }}
+
+{% set items = [] %}
+{% for citem in content.menus['#items'] %}
+  {% set citem_entity = pre_render(citem) %}
+    {% set price = "$" ~ citem_entity.field_cost.0['#markup'] %}
+    
+    {% set categories = [] %}
+    {% for cat in citem_entity.field_menu_category['#items'] %}
+      {% set cat = citem_entity.field_menu_category[loop.index0] %}
+      {% set cat_entity = pre_render(cat) %}
+        {% set category = 'term' ~ cat_entity['#plain_text']  %}
+      {% set categories = categories|merge([category]) %}
+    {% endfor %}
+
+    {%
+      set item = {
+        'name': citem_entity['#node'].getTitle(),
+        'price': price,
+        'image': image_attr(citem_entity.field_image),
+        'categories': categories|join(" "),
+      }
+    %}
+
+  {% set items = items|merge([item]) %}
+{% endfor %}
+
 {% include '@d8training/menu/menu.twig' with {
     'kicker': content.field_kicker.0['#context'].value,
     'title': content.field_title.0['#context'].value,
     'categories': content.categories,
-    'menus': content.menus,
+    'menus': items,
   } only
 %}

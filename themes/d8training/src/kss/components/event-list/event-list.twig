@@ -22,13 +22,13 @@
  */
 #}
 <section class="event-area section-padding">
-  {% if bg %}
-  <div class="event-area-bg" style="background: rgba(0, 0, 0, 0) url('{{ bg.src }}') no-repeat scroll center center / cover;"></div>
-  {% endif %}
+  {% if bg|default() -%}
+    <div class="event-area-bg" style="background-image: url('{{ bg.src }}')"></div>
+  {%- endif %}
 
   <div class="container wow fadeIn">
     
-    {% if title -%}
+    {% if title|default -%}
       <div class="row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
           <div class="area-title text-center">
@@ -43,17 +43,22 @@
       <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
         {% for event in events %}
         <div class="single-event">
-          <div class="event-img">
-            {% include '@d8training/image/image.twig' with event.image only %}
-          </div>
-          <div class="event-content">
-            <div class="event-date">
-              <p><span>{{ event.date.day }}</span>{{ event.date.mon }}</p>
+          {% if event.image|default() -%}
+            <div class="event-img">
+              {% include '@d8training/image/image.twig' with event.image only %}
             </div>
+          {%- endif %}
+          <div class="event-content">
+            {% if event.date|default() -%}
+              <div class="event-date">
+                <p><span>{{ event.date.day }}</span>{{ event.date.mon }}</p>
+              </div>
+            {%- endif %}
+
             <div class="event-details">
-              <h3><a href="single-event.html">{{ event.title }}</a></h3>
-              <p class="event-meta">{{ event.location }}</p>
-              <p>{{ event.desc }}</p>
+              <h3><a href="{{ event.url }}">{{ event.title }}</a></h3>
+              {% if event.location|default() %}<p class="event-meta">{{ event.location }}</p>{% endif %}
+              {% if event.desc|default() %}<p>{{ event.desc }}</p>{% endif %}
             </div>
           </div>
         </div>

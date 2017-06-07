@@ -34,7 +34,7 @@
         {% for member in members %}
         <div class="single-team-member text-center">
           <div class="team-member-img ">
-            {% if member.image %}
+            {% if member.image|default() %}
               {% include '@d8training/image/image.twig' with member.image only %}
             {% endif %}
             <div class="member-social-bookmark">

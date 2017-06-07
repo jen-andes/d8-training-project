@@ -24,13 +24,17 @@
       {% for item in items %}     
       <div class="col-md-offset-2 col-lg-offset-2 col-lg-8  col-md-8 col-sm-12 col-xs-12">
         <div class="single-testmonail text-center">
-          {% if item.icon == 'quote' -%}
+          {% if item.icon|default() and item.icon == 'quote' -%}
             <div class="quate-icon"><i class="fa fa-quote-right"></i></div>
           {%- endif %}
           <p>{{ item.text }}</p>
           <div class="carousel-member-name-title">
-            <h4>{{ item.title }}</h4>
-            <p>{{ item.caption }}</p>
+            {% if item.title|default() -%}
+              <h4>{{ item.title }}</h4>
+            {%- endif %}
+            {% if item.caption|default() -%}
+              <p>{{ item.caption }}</p>
+            {%- endif %}
           </div>
         </div>
       </div>
