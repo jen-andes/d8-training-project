@@ -24,9 +24,15 @@
         {% for counter in counters %}
         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
             <div class="single-counter text-center">
-                <div class="counter-icon"><i class="fa fa-{{ counter.icon }}"></i></div>
-                <h3 class="counter">{{ counter.value }}</h3>
-                <p>{{ counter.caption }}</p>
+                {% if counter.icon|default() -%}
+                  <div class="counter-icon"><i class="fa fa-{{ counter.icon }}"></i></div>
+                {%- endif %}
+                {% if counter.value|default() -%}
+                  <h3 class="counter">{{ counter.value }}</h3>
+                {%- endif %}
+                {% if counter.caption|default() -%}
+                  <p>{{ counter.caption }}</p>
+                {%- endif %}
             </div>
         </div>
         {% endfor %}

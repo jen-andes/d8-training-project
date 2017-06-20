@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Promotions
+ *
+ * Available variables:
+ * - type: The promotions display type. {default/featured}
+ * - bg: The background image.
+ *   - src: Source path of the image
+ *   - alt: Alternate text of the image
+ * - kicker: The highlighted title.
+ * - title: The title.
+ * - items[]: An array of promotions.
+ *   - image: The item image.
+ *     - src: Source path of the image
+ *     - alt: Alternate text of the image
+ *   - title: The item title.
+ *   - desc: The promo description.
+ *   - cta: The cta link.
+ *     - text: The button text.
+ *     - url: The link url.
+ */
+#}
+{% include '@d8training/promotions/promotions.twig' with {
+    'type': 'featured',
+    'kicker': kicker,
+    'title': title,
+    'items': items
+  } only 
+%}

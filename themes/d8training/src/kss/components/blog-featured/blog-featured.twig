@@ -31,14 +31,14 @@
       <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
         <div class="single-post text-center">
           <div class="blog-post-img ">
-            {% if blog.image %}
+            {% if blog.image|default() -%}
               {% include '@d8training/image/image.twig' with blog.image only %}
-            {% endif %}
+            {%- endif %}
           </div>
           <div class="post-details">
-            <a href="#" class="post-meta-button">{{ blog.category }}</a>
+            {% if blog.category|default() %}<a href="#" class="post-meta-button">{{ blog.category }}</a>{% endif %}
             <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
-            <p class="post-meta"><a href="#">{{ blog.date }}</a></p>
+            {% if blog.date|default() %}<p class="post-meta"><a href="#">{{ blog.date }}</a></p>{% endif %}
           </div>
         </div>
       </div>

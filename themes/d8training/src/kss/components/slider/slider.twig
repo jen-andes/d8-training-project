@@ -16,10 +16,15 @@
 <div class="slider-area">
   <div class="pogoSlider">
     {% for slide in slides %}
-    <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background:url({{ slide.bg }}) no-repeat scroll 0 0 / cover;">
-      <h2 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="700">{{ slide.title }}</h2>
-      <h1 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="1500">{{ slide.subtitle }}</h1>
-      {% if slide.cta is not empty -%}
+    <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background:url({{ slide.bg.src }}) no-repeat scroll 0 0 / cover;">
+
+      {% if slide.title|default() -%}
+        <h2 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="700">{{ slide.title }}</h2>
+      {%- endif %}
+      {% if slide.subtitle|default() -%}
+        <h1 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="1500">{{ slide.subtitle }}</h1>
+      {%- endif %}
+      {% if slide.cta|default() -%}
         <h3 class="pogoSlider-slide-element" data-in="expand" data-out="expand" data-duration="2300">
           <a href="{{ slide.cta.url }}">{{ slide.cta.text }}</a>
         </h3>

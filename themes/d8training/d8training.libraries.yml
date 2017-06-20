@@ -93,6 +93,8 @@ promotions:
   css:
     theme:
       dist/css/promotions.css: {}
+  js:
+    dist/js/promotions.js: {}
 
 reservation:
   css:

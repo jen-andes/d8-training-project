@@ -1,5 +1,0 @@
-name: D8Training Component
-description: Alter paragraph content.
-package: D8Training Custom
-type: module
-core: '8.x'

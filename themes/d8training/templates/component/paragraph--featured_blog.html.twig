@@ -9,10 +9,11 @@
 {% for citem in content.field_featured_blog['#items'] %}
   {% set citem = content.field_featured_blog[loop.index0] %}
   {% set citem_entity = pre_render(citem) %}
+    {% set path = path('entity.node.canonical', {'node': citem_entity['#node'].id() }) %}
     {%
       set blog = {
         'title': citem_entity.title.0['#context'].value,
-        'url': 'test',
+        'url': path,
         'category': 'teat',
         'image': image_attr(citem_entity.field_featured_image),
         'date': 'ddate',

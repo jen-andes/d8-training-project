@@ -4,6 +4,7 @@
  * Promotions
  *
  * Available variables:
+ * - type: The promotions display type. {default/featured}
  * - bg: The background image.
  *   - src: Source path of the image
  *   - alt: Alternate text of the image
@@ -21,8 +22,16 @@
  *     - url: The link url.
  */
 #}
-<section class="promotions-area section-padding">
-  <div class="promotion-area-bg" style="background-image: url({{ bg.src }})"></div>
+{% set style = (type == 'featured') ? 'style-three' : '' %}
+{% set itemClass = (type == 'default') ? 'text-center' : '' %}
+
+<section class="{{ style }} promotions-area section-padding">
+  {% if bg|default() %}
+    <div class="promotion-area-bg" style="background-image: url({{ bg.src }})"></div>
+  {% else %}
+    <div class="promotion-area-bg"></div>
+  {% endif %}
+
   <div class="container wow fadeIn">
     <div class="row">
       <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -32,23 +41,55 @@
         </div>
       </div>
     </div>
+
     <div class="row">
-      {% for item in items %}
-      <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-        <div class="single-promotions text-center">
-          <div class="promotions-img">
-            <img src="{{ item.image.src }}" alt="{{ item.image.alt }}">
-            <div class="pakage-rate">
-                <p>{{ item.price_label }} <span>{{ item.price }}</span></p>
+      {% if type == 'featured' -%}
+        <div class="menu-discount-offer col-md-12 col-lg-12 col-sm-12 col-xs-12">
+      {%- endif %}
+
+        {% for item in items %}
+          {% if type == 'default' -%}
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+          {%- endif %}
+          
+            <div class="single-promotions {{ itemClass }}">
+              <div class="promotions-img">
+                {% if item.image|default() -%}
+                  <div class="food-menu-img">
+                    {% include '@d8training/image/image.twig' with item.image only %}
+                  </div>
+                {%- endif %}
+
+                {% if item.price|default() and type == 'default' -%}
+                <div class="pakage-rate">
+                  <p>{{ item.price_label }} <span>{{ item.price }}</span></p>
+                </div>
+                {%- endif %}
+              </div>
+              <div class="promotions-details">
+                {% if type == 'featured' %}
+                  <h3>{{ item.title }}</h3>
+                {% else %}
+                  <h4>{{ item.title }}</h4>
+                {% endif %}
+                {% if item.desc|default() -%}
+                  <p>{{ item.desc }}</p>
+                {%- endif %}
+                {% if item.cta|default() -%}
+                  <a href="{{ item.cta.url }}" class="read-more">{{ item.cta.text }}</a>
+                {%- endif %}
+              </div>
             </div>
-          </div>
-          <div class="promotions-details">
-            <h4>{{ item.title }}</h4>
-            <a href="{{ item.cta.url }}" class="read-more">{{ item.cta.text }}</a>
-          </div>
+
+          {% if type == 'default' -%}
+            </div>
+          {%- endif %}
+        {% endfor %}
+
+      {% if type == 'featured' -%}
         </div>
-      </div>
-      {% endfor %}
+      {%- endif %}
     </div>
+
   </div>
 </section>

@@ -25,10 +25,9 @@
   {% for citem in slideshow.field_slide['#items'] %}
     {% set citem = slideshow.field_slide[loop.index0] %}
     {% set citem_entity = pre_render(citem) %}
-      {% set image = image_attr(citem_entity.field_image) %}
       {%
         set slide = {
-          'bg': image.src,
+          'bg': image_attr(citem_entity.field_image),
           'title': citem_entity.field_title.0['#context'].value,
           'subtitle': citem_entity.field_sub_title.0['#context'].value,
           'cta': {

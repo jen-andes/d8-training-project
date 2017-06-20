@@ -4,19 +4,22 @@
  * Theme override to display an 'Promotion' component.
  */
 #}
-{% set bg_image = image_attr(content.field_image) %}
+{% set isFeatured = content.field_boolean.0['#markup'] %}
+{% set type = (isFeatured == 1) ? 'featured' : 'default' %}
 {% set promotions = [] %}
 {% for citem in content.field_promo_product['#items'] %}
   {% set citem = content.field_promo_product[loop.index0] %}
   {% set citem_entity = pre_render(citem) %}
     {% set image = image_attr(citem_entity.field_image) %}
+    {% set price = '$' ~ citem_entity.field_cost.0['#markup'] %}
     {%
       set promo = {
-        'price': '$5',
+        'price': price,
         'price_label': 'From',
         'image': image_attr(citem_entity.field_image),
         'bg': image.src,
-        'title': '',
+        'title': citem_entity['#node'].getTitle(),
+        'desc': citem_entity.field_desc.0['#context'].value,
         'cta': {
           'text': 'Order Now',
           'url': '#',
@@ -28,9 +31,10 @@
 
 {{ attach_library('d8training/promotions') }}
 {% include '@d8training/promotions/promotions.twig' with {
+    'type': type,
     'kicker': content.field_kicker.0['#context'].value,
     'title': content.field_title.0['#context'].value,
-    'bg': bg_image,
+    'bg': image_attr(content.field_image),
     'items': promotions,
   } only
 %}

@@ -6,10 +6,38 @@
 #}
 
 {{ attach_library('d8training/event-list') }}
+
+{% set items = [] %}
+{% for citem in content.events['#items'] %}
+  {% set citem_entity = pre_render(citem) %}
+    {% set date = '' %}
+    {% if citem_entity.field_timestamp['#items'] is defined %}
+      {% 
+        set date = {
+          'day': citem_entity.field_timestamp['#items'].value|date('d'),
+          'mon': citem_entity.field_timestamp['#items'].value|date('F')
+        }
+      %}
+    {% endif %}
+
+    {% set path = path('entity.node.canonical', {'node': citem_entity['#node'].id() }) %}
+    {%
+      set item = {
+        'title': citem_entity['#node'].getTitle(),
+        'url': path,
+        'image': image_attr(citem_entity.field_featured_image),
+        'date': date,
+        'desc': citem_entity.field_desc.0['#context'].value,
+        'location': citem_entity.field_address.0['#context'].value,
+      }
+    %}
+  {% set items = items|merge([item]) %}
+{% endfor %}
+
 {% include '@d8training/event-list/event-list.twig' with {
     'kicker': content.field_kicker.0['#context'].value,
     'title': content.field_title.0['#context'].value,
     'bg': image_attr(content.field_image),
-    'events': content.events,
+    'events': items,
   } only
 %}

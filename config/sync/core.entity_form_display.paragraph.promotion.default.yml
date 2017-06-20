@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.promotion.field_boolean
     - field.field.paragraph.promotion.field_image
     - field.field.paragraph.promotion.field_kicker
     - field.field.paragraph.promotion.field_promo_product
@@ -16,8 +17,15 @@ targetEntityType: paragraph
 bundle: promotion
 mode: default
 content:
+  field_boolean:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_image:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -25,7 +33,7 @@ content:
     type: image_image
     region: content
   field_kicker:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -33,7 +41,7 @@ content:
     type: string_textfield
     region: content
   field_promo_product:
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -42,7 +50,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''

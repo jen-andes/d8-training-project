@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display "User" page.
+ *
+ */
+#}
+
+{% if logged_in == TRUE %}
+  
+  {{ page.header }}
+    {{ page.content }}
+  {{ page.footer }}
+
+{% else %}
+
+  <div class="section" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+          {{ page.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endif %}

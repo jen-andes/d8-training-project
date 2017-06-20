@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.promotion.field_boolean
     - field.field.paragraph.promotion.field_image
     - field.field.paragraph.promotion.field_kicker
     - field.field.paragraph.promotion.field_promo_product
@@ -15,6 +16,16 @@ targetEntityType: paragraph
 bundle: promotion
 mode: default
 content:
+  field_boolean:
+    weight: 4
+    label: above
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_image:
     weight: 3
     label: above
