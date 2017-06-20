@@ -1,0 +1,43 @@
+{
+  "type": "featured",
+  "kicker": "Specials",
+  "title": "Today's Promotion",
+  "items": [
+    {
+      "image": {
+        "src": "../../src/kss/components/promotions-featured/images/promo_slide_1.jpg",
+        "alt": ""
+      },
+      "title": "40% off for 9'' - 12'' pizza - Wed, Thu, Friday only",
+      "desc": "Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000",
+      "cta": {
+        "text": "Order Now",
+        "url": "#"
+      }
+    },
+    {
+      "image": {
+        "src": "../../src/kss/components/promotions-featured/images/promo_slide_1.jpg",
+        "alt": ""
+      },
+      "title": "40% off for 9'' - 12'' pizza - Wed, Thu, Friday only",
+      "desc": "Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000",
+      "cta": {
+        "text": "Order Now",
+        "url": "#"
+      }
+    },
+    {
+      "image": {
+        "src": "../../src/kss/components/promotions-featured/images/promo_slide_1.jpg",
+        "alt": ""
+      },
+      "title": "40% off for 9'' - 12'' pizza - Wed, Thu, Friday only",
+      "desc": "Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000",
+      "cta": {
+        "text": "Order Now",
+        "url": "#"
+      }
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-uuid: 0618d555-41a9-46ff-911d-dc5e166ab500
+uuid: 1d7b020f-30fc-4fbb-a894-e2a57426a79a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.featured
     - field.field.node.product.field_code
     - field.field.node.product.field_cost
     - field.field.node.product.field_desc
@@ -13,36 +13,28 @@ dependencies:
   module:
     - image
     - user
-id: node.product.teaser
+id: node.product.featured
 targetEntityType: node
 bundle: product
-mode: teaser
+mode: featured
 content:
-  field_cost:
-    type: number_integer
+  field_desc:
+    type: string
     weight: 2
     region: content
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
   field_image:
-    type: image
     weight: 1
-    region: content
     label: above
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-  field_menu_category:
-    type: entity_reference_entity_id
-    weight: 3
+    type: image
     region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   links:
     weight: 0
     region: content
@@ -50,4 +42,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_code: true
-  field_desc: true
+  field_cost: true
+  field_menu_category: true

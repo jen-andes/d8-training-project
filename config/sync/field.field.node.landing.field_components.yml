@@ -8,7 +8,9 @@ dependencies:
     - paragraphs.paragraphs_type.breaker
     - paragraphs.paragraphs_type.carousel
     - paragraphs.paragraphs_type.counter
+    - paragraphs.paragraphs_type.menu
     - paragraphs.paragraphs_type.our_story
+    - paragraphs.paragraphs_type.promotion
     - paragraphs.paragraphs_type.reservation
     - paragraphs.paragraphs_type.team
   module:
@@ -30,7 +32,9 @@ settings:
       carousel: carousel
       counter: counter
       breaker: breaker
+      menu: menu
       our_story: our_story
+      promotion: promotion
       reservation: reservation
       team: team
     target_bundles_drag_drop:
@@ -56,8 +60,8 @@ settings:
         weight: 20
         enabled: false
       menu:
+        enabled: true
         weight: 21
-        enabled: false
       info:
         weight: 22
         enabled: false
@@ -65,8 +69,8 @@ settings:
         enabled: true
         weight: 22
       promotion:
+        enabled: true
         weight: 23
-        enabled: false
       slide:
         weight: 24
         enabled: false

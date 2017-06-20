@@ -1,21 +1,21 @@
-uuid: 7e7ac24d-2854-4bc5-b222-d8d4abefd813
+uuid: 665ce526-55fd-49ce-89d3-645b134292fe
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date
+    - field.storage.node.field_timestamp
     - node.type.event
-  module:
-    - datetime
-id: node.event.field_date
-field_name: field_date
+id: node.event.field_timestamp
+field_name: field_timestamp
 entity_type: node
 bundle: event
 label: 'Event Date'
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 1496836682
 default_value_callback: ''
 settings: {  }
-field_type: datetime
+field_type: timestamp

@@ -97,3 +97,87 @@
 .promotions-area a.read-more {
     margin-top: 0;
 }
+
+/*-----------------------------
+    PROMOTIONS - DISCOUNT
+------------------------------*/
+
+.style-three .promotion-area-bg {
+    background: #f4f4f4 none repeat scroll 0 0;
+}
+
+.style-three .promotion-area-bg::after {
+    background: inherit;
+}
+
+.style-three.promotions-area .area-title h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: inherit;
+    color: #212324;
+}
+
+.home-three .style-three.promotions-area .area-title h3 {
+    color: #fff;
+}
+
+.style-three .promotions-img {
+    height: auto;
+    max-height: 450px;
+    width: 70%;
+}
+
+.style-three .promotions-details {
+    background: #fff none repeat scroll 0 0;
+    color: #1a1a1a;
+    height: 300px;
+    margin-top: -150px;
+    max-height: 350px;
+    padding: 50px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 40%;
+    z-index: 9;
+}
+
+.style-three .promotions-details h3 {
+    font-size: 30px;
+}
+
+.style-three .promotions-details a.read-more {
+    margin-top: 25px;
+}
+
+.style-three .promotions-details a.read-more:hover {
+    background: #c1934c none repeat scroll 0 0;
+    border-color: #c1934c;
+    color: #fff;
+}
+
+.row.menu-discount-offer {
+    margin: auto;
+}
+
+.menu-discount-offer .owl-dots > div {
+    background: #bcbfc1 none repeat scroll 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    margin: 0 5px;
+    width: 15px;
+}
+
+.owl-dots {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.menu-discount-offer .owl-dots > div.active {
+    background: #1a1a1a none repeat scroll 0 0;
+}
+
+.style-three.home-three.promotions-area .area-title h3 {
+  color: #fff;
+}
+

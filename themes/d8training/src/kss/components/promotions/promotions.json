@@ -1,5 +1,9 @@
 {
-  "bg": "../../src/kss/components/promotions/images/promotions_area_bg_1.jpg",
+  "type": "default",
+  "bg": {
+    "src": "../../src/kss/components/promotions/images/promotions_area_bg_1.jpg",
+    "alt": ""
+  },
   "kicker": "Specials",
   "title": "Special Promotion",
   "items": [
