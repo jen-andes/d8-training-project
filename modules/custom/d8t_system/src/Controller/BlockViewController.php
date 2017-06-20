@@ -13,6 +13,10 @@ class BlockViewController {
    */
   public function render(&$variables) {
     $id = $variables['elements']['#id'];
+    $custom = array('header', 'footer');
+    if (!in_array($id, $custom)) {
+      return $variables;
+    }
 
     // menus
     $menu_map = ['header' => 'main', 'footer' => 'footer'];
